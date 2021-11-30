@@ -1,6 +1,6 @@
 # CY DATING, Le site web ;)
 
-Project généré via le [Angular CLI](https://github.com/angular/angular-cli) en version 11.0.2.
+Project généré via le [Angular CLI](https://github.com/angular/angular-cli) en version 13.0.3.
 
 **/!\\** Ce repository sert uniquement à la partie Front-end du site, pour le Back-end consultez le FTP
 
