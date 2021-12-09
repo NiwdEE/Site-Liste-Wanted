@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+
+html{
+    --primary-theme: #140906;
+    --secondary-theme: #361810;
+
+    --p-1: #ffe4d4;
+
+    height: 100%;
+}
+
+body{
+    background: var(--primary-theme);
+    background: radial-gradient(var(--secondary-theme) 23%, var(--primary-theme) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    color: var(--p-1);
+
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+
+    display: flex;
+}
+
+#app-root{
+    height: 100%;
+    width: 100%;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
