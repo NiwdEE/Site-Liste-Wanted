@@ -1,0 +1,25 @@
+.FullPage{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .row{
+        width: 100%;
+        flex-grow: 1;
+
+        display: flex;
+        flex-direction: row;
+
+        & > div{
+            height: 100%;
+            flex-grow: 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 2em;
+        }
+    }
+}

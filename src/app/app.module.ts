@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { NavComponent } from './nav/nav.component';
+import { PaletteComponent } from './palette/palette.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     FourOhFourComponent,
-    NavComponent
+    NavComponent,
+    PaletteComponent
   ],
   imports: [
     BrowserModule,

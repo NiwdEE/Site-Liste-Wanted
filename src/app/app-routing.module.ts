@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { HomeComponent } from './home/home.component';
+import { PaletteComponent } from './palette/palette.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,10 @@ const routes: Routes = [
     path: 'test',
     component: HomeComponent,
     data: {index: "2"}
+  },
+  {
+    path: 'palette',
+    component: PaletteComponent
   },
   {
     path: '**',

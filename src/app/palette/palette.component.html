@@ -1,0 +1,7 @@
+<div class="FullPage">
+    <div *ngFor="let pallete of pals" class="row">
+        <div *ngFor="let num of nums; let i = index" [style]="'background-color: var(--p-' + pallete + '-' + (i+1) + ')'" [innerText]="'--p-' + pallete + '-' + (i+1)">
+            
+        </div>
+    </div>
+</div>
