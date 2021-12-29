@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router, Scroll } from '@angular/router';
-import { Poles } from './people';
+import { PeopleService } from './people.service';
 
 @Component({
   selector: 'app-home',
@@ -10,9 +10,11 @@ import { Poles } from './people';
 })
 export class HomeComponent implements OnInit {
 
+
   A = new Array(100);
 
-  constructor(private router: Router){
+  constructor(private router: Router, public people: PeopleService){
+    // console.log(people.Poles)
     for(let i =0; i < 100; i++) this.A[i] = i;
 
     this.router.events.subscribe((val)=>{

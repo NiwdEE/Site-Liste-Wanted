@@ -69,8 +69,11 @@ html{
     }
       
     &::-webkit-scrollbar-thumb {
-        background: brown;
+        background: var(--p-r-8);
         border-radius: 10px;
+        // &:hover{
+        //     background-color: 
+        // }
     };
       
     &::-webkit-scrollbar-track {

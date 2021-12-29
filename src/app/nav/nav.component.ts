@@ -16,7 +16,8 @@ export class NavComponent implements OnInit {
   Navs = [
     {
       name: "Accueil",
-      path: ''
+      path: '',
+      goto: "home"
     },
     {
       name: "Membres",

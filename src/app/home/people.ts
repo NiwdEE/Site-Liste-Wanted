@@ -2,12 +2,19 @@ export type member = {
     name: string,
     nickname: string,
     desc: string,
-    tag?: string
+    tag?: string,
+    id?: number
 }
   
 export type pole = {
     name: string,
     members: member[]
+}
+
+export const nullMember = {
+  name: "",
+  nickname: "",
+  desc: ""
 }
   
 const Libre = [
@@ -105,7 +112,7 @@ export const Poles: pole[] = [
           desc: ""
         },
         {
-          name: "Ayann Samdjee",
+          name: "Ayann Mamodaly Samdjee",
           nickname: "Akamura",
           desc: "Fermez la porte, y'a la pookie dans l'side"
         },
@@ -136,8 +143,8 @@ export const Poles: pole[] = [
           desc: ""
         },
         {
-          name: "Samy",
-          nickname: "",
+          name: "Samy Lenormand-boucherit",
+          nickname: "Samy The Kid",
           desc: ""
         }
       ]
@@ -149,7 +156,8 @@ export const Poles: pole[] = [
           name: "Edwin Amrein",
           nickname: "L'alchimiste",
           desc: "Lui même ne sait pas ce qu'il met dans ses mélanges mais l'imporant c'est que c'est bon (et bien fort)",
-          tag: "Respo Com'"
+          tag: "Respo Com'",
+          id: 69
         },
         {
           name: "Martin Valignon",
@@ -214,18 +222,18 @@ export const Poles: pole[] = [
           tag: "Respo Entreprise"
         },
         {
-          name: "Elie ?",
+          name: "Elie Passi",
           nickname: "Sapologue",
           desc: ""
         },
         {
           name: "Louise Déprés",
-          nickname: "",
+          nickname: "Mezaffaires",
           desc: ""
         },
         {
-          name: "Mohammed",
-          nickname: "",
+          name: "Mohammed Rahmani",
+          nickname: "Jack",
           desc: ""
         }
       ]
@@ -234,8 +242,8 @@ export const Poles: pole[] = [
       name: "Pôle-Yvalent",
       members: [
         {
-          name: "Adam",
-          nickname: "",
+          name: "Adam Ben Chaabane",
+          nickname: "Aladdin²",
           desc: ""
         }
       ]

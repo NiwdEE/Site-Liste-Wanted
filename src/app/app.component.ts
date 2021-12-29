@@ -1,9 +1,10 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { Router, RouterOutlet, NavigationEnd, Scroll } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 
 import { slideInAnimation } from './animations';
 import { NavService } from './nav/nav.service';
+import { ScrollService } from './services/scroll.service';
 
 @Component({
   selector: '#app-root',
@@ -14,22 +15,20 @@ import { NavService } from './nav/nav.service';
   ],
   // encapsulation: ViewEncapsulation.None
 })
-export class AppComponent {
-  title = 'cd';
+export class AppComponent implements AfterViewInit {
+  
+  @ViewChild('scrollable') scrollable: ElementRef|undefined=undefined;
 
-  constructor(public nav: NavService, private router: Router){
-    
+  constructor(public nav: NavService, public scroll: ScrollService){
 
-    this.router.events.subscribe((val)=>{
-      // console.log(val)
-      if(val instanceof Scroll && val.anchor){
-        document.getElementById(val.anchor)?.scrollIntoView({behavior: 'smooth'});
-      }
-    })
   }
 
   //Fonction pour Faire marcher et animer le router-outlet
   prepareRoute(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['index'];
+  }
+
+  ngAfterViewInit(): void {
+    this.scroll.setScrollable(this.scrollable);
   }
 }

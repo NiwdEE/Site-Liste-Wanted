@@ -1,9 +1,24 @@
 <div class="inner">
-    <div id="mainPannel">
-
+    <div id="home">
+        
     </div>
 
-    <span routerLink="/test" *ngFor="let i of A">home works {{i}}!</span>
-    <div id="members"></div>
+    <!-- <span routerLink="/test" *ngFor="let i of A">home works {{i}}!</span> -->
+    <div id="members">
+        <div class="pole" *ngFor="let pole of people.Poles">
+            <div class="banner">
+                <span>{{pole.name}}</span>
+            </div>
+            <div class="people">
+                <ng-container *ngFor="let member of pole.members">
+                    <div memberCard [id]="member.id">
+                    
+                    </div>
+                    <br/>
+                </ng-container>
+            </div>
+            
+        </div>
+    </div>
 </div>
 
