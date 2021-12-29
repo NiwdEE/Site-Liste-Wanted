@@ -1,1 +1,20 @@
-<p>nav works!</p>
+<div class="bar" [class]="{'hidden': parentScroll < 100}">
+
+    <div class="logo">
+        <img src="/assets/images/logo.svg" alt="Logo Wanted">
+    </div>
+
+    <nav>
+        <a *ngFor="let n of Navs; let i = index" [class]="{'hover': hoverNav[i]>0}"
+        (click)="navigate(n.path, n.goto)" (mouseenter)="hover(i)" (mouseleave)="unhover(i)">
+            <span>
+                {{n.name}}
+            </span>
+        </a>
+    </nav>
+
+    <div class="logo">
+        <img src="/assets/images/logo.svg" alt="Logo Wanted">
+    </div>
+
+</div>

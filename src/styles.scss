@@ -46,6 +46,12 @@ html{
     --p-v-8: #6f424d;
     --p-v-9: #883d4f;
 
+    //Vert
+    --p-g-1: #313d00;
+    --p-g-2: #324a06;
+    --p-g-3: #4d604c;
+    --p-g-4: #48bf2a;
+
 
 
 
@@ -57,9 +63,27 @@ html{
     height: 100%;
 }
 
+.scroll{
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+      
+    &::-webkit-scrollbar-thumb {
+        background: brown;
+        border-radius: 10px;
+    };
+      
+    &::-webkit-scrollbar-track {
+        background: #84cf8c;
+        border: 4px solid transparent;
+        background-clip: padding-box;
+    };
+}
+
+
 body{
     background: var(--primary-theme);
-    background: radial-gradient(var(--secondary-theme) 23%, var(--primary-theme) 100%);
+    background: radial-gradient(var(--p-r-5) 23%, var(--p-r-4) 100%);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
@@ -76,6 +100,7 @@ body{
     height: 100%;
     width: 100%;
 }
+
 
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */

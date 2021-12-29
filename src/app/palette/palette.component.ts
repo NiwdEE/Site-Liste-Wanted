@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaletteComponent implements OnInit {
 
-  pals = ['j', 'o', 'r', 'v'];
+  pals = ['j', 'o', 'r', 'v', 'g'];
   nums = Array(9);
 
   constructor() { }
