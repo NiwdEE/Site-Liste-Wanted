@@ -104,6 +104,83 @@ body{
     width: 100%;
 }
 
+/*
+Chiffres:     O
+Accents:      X
+E dans l'O:   X
+Diff Min/maj: X
+*/
+@font-face {
+    font-family: 'Buffalo Grunge';
+    src: url(/assets/fonts/BuffaloInline2Grunge.otf);
+}
+
+/*
+Chiffres:     O
+Accents:      O
+E dans l'O:   O
+Diff Min/maj: ~
+*/
+@font-face {
+    font-family: 'Docktrin';
+    src: url(/assets/fonts/docktrin.ttf);
+}
+
+/*
+Chiffres:     O
+Accents:      X
+E dans l'O:   X
+Diff Min/maj: X
+*/
+@font-face {
+    font-family: 'Nandaka';
+    src: url(/assets/fonts/nandaka_western.ttf);
+}
+
+/*
+Chiffres:     O
+Accents:      O
+E dans l'O:   O
+Diff Min/maj: O
+*/
+@font-face {
+    font-family: 'Saddle bag';
+    src: url(/assets/fonts/Saddlebag.ttf);
+}
+
+/*
+Chiffres:     O
+Accents:      X
+E dans l'O:   X
+Diff Min/maj: O
+*/
+@font-face {
+    font-family: 'Showguide';
+    src: url(/assets/fonts/showguide.ttf);
+}
+
+/*
+Chiffres:     X
+Accents:      O
+E dans l'O:   O
+Diff Min/maj: X
+*/
+@font-face {
+    font-family: 'Texas Tango';
+    src: url(/assets/fonts/Texas_Tango.otf);
+}
+
+/*
+Chiffres:     X
+Accents:      O
+E dans l'O:   X
+Diff Min/maj: O
+*/
+@font-face {
+    font-family: 'Western Bang Bang';
+    src: url(/assets/fonts/western_bang_bang.otf);
+}
+
 
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
