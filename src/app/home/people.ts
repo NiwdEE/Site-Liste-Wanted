@@ -29,15 +29,6 @@ const Libre = [
 ]
   
   /*
-  Personnes à qui demander leur nom de famille:
-    Marie TVL
-    Samy
-    Elie
-    Mohammed
-    Adam
-  */
-  
-  /*
   Personnes à qui demander une explication de leur surnom:
     Sophia
     Marie T
@@ -79,6 +70,12 @@ export const Poles: pole[] = [
           nickname: "Licorneuuuh",
           desc: "Heuuuu...",
           tag: "Secrétaire"
+        },
+        {
+          name: "Alicia Beguin",
+          nickname: "Abadakor",
+          desc: "",
+          tag: "Vice-trésorière"
         }
       ]
     },
@@ -86,10 +83,15 @@ export const Poles: pole[] = [
       name: "Pôle Soirée",
       members:[
         {
+          name: "Martin Valignon",
+          nickname: "Vodkarambar",
+          desc: "Vous avez du parquais ? Il a des carambars !",
+          tag: "Respo Soirée"
+        },
+        {
           name: "Dorian Fuvel",
           nickname: "Cheer'If 316",
-          desc: "Un sombre passé...",
-          tag: "Respo Soirée"
+          desc: "Un sombre passé..."
         },
         {
           name: "Duncan Boukhssibi",
@@ -160,11 +162,6 @@ export const Poles: pole[] = [
           id: 69
         },
         {
-          name: "Martin Valignon",
-          nickname: "Vodkarambar",
-          desc: "Vous avez du parquais ? Il a des carambars !"
-        },
-        {
           name: "Antoine Moreau",
           nickname: "Le truand",
           desc: "Ses profs ne le connaissent pas, ses camarades ne l'ont jamais vu, ses bulletins sont blancs comme neige, mais il continue de valider ses semestres..."
@@ -180,10 +177,15 @@ export const Poles: pole[] = [
       name: "Pôle Event",
       members: [
         {
+          name: "Marie Travaillé-Pestel",
+          nickname: "Britney",
+          desc: "",
+          tag: "Respo Event"
+        },
+        {
           name: "Marion Pinoit",
           nickname: "A Kroquer",
-          desc: "Avant d'acheter 520 bières, il aurait fallut penser au stockage",
-          tag: "Respo Event"
+          desc: "Avant d'acheter 520 bières, il aurait fallut penser au stockage"
         },
         {
           name: "Brayan Khali",
@@ -203,11 +205,6 @@ export const Poles: pole[] = [
         {
           name: "Ludivine Bizien",
           nickname: "La Tisseuse",
-          desc: ""
-        },
-        {
-          name: "Marie Travaillé-Pestel",
-          nickname: "Britney",
           desc: ""
         }
       ]
