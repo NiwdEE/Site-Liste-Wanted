@@ -70,6 +70,12 @@ export const Poles: pole[] = [
           nickname: "Licorneuuuh",
           desc: "Heuuuu...",
           tag: "Secrétaire"
+        },
+        {
+          name: "Alicia Beguin",
+          nickname: "Abadakor",
+          desc: "",
+          tag: "Vice-trésorière"
         }
       ]
     },
@@ -171,10 +177,15 @@ export const Poles: pole[] = [
       name: "Pôle Event",
       members: [
         {
+          name: "Marie Travaillé-Pestel",
+          nickname: "Britney",
+          desc: "",
+          tag: "Respo Event"
+        },
+        {
           name: "Marion Pinoit",
           nickname: "A Kroquer",
-          desc: "Avant d'acheter 520 bières, il aurait fallut penser au stockage",
-          tag: "Respo Event"
+          desc: "Avant d'acheter 520 bières, il aurait fallut penser au stockage"
         },
         {
           name: "Brayan Khali",
@@ -194,11 +205,6 @@ export const Poles: pole[] = [
         {
           name: "Ludivine Bizien",
           nickname: "La Tisseuse",
-          desc: ""
-        },
-        {
-          name: "Marie Travaillé-Pestel",
-          nickname: "Britney",
           desc: ""
         }
       ]
