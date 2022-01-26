@@ -9,6 +9,7 @@ import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { NavComponent } from './nav/nav.component';
 import { PaletteComponent } from './palette/palette.component';
 import { MemberCardComponent } from './home/member-card/member-card.component';
+import { TestcardComponent } from './testcard/testcard.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MemberCardComponent } from './home/member-card/member-card.component';
     FourOhFourComponent,
     NavComponent,
     PaletteComponent,
-    MemberCardComponent
+    MemberCardComponent,
+    TestcardComponent
   ],
   imports: [
     BrowserModule,

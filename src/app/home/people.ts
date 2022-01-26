@@ -29,15 +29,6 @@ const Libre = [
 ]
   
   /*
-  Personnes à qui demander leur nom de famille:
-    Marie TVL
-    Samy
-    Elie
-    Mohammed
-    Adam
-  */
-  
-  /*
   Personnes à qui demander une explication de leur surnom:
     Sophia
     Marie T
@@ -86,10 +77,15 @@ export const Poles: pole[] = [
       name: "Pôle Soirée",
       members:[
         {
+          name: "Martin Valignon",
+          nickname: "Vodkarambar",
+          desc: "Vous avez du parquais ? Il a des carambars !",
+          tag: "Respo Soirée"
+        },
+        {
           name: "Dorian Fuvel",
           nickname: "Cheer'If 316",
-          desc: "Un sombre passé...",
-          tag: "Respo Soirée"
+          desc: "Un sombre passé..."
         },
         {
           name: "Duncan Boukhssibi",
@@ -160,11 +156,6 @@ export const Poles: pole[] = [
           id: 69
         },
         {
-          name: "Martin Valignon",
-          nickname: "Vodkarambar",
-          desc: "Vous avez du parquais ? Il a des carambars !"
-        },
-        {
           name: "Antoine Moreau",
           nickname: "Le truand",
           desc: "Ses profs ne le connaissent pas, ses camarades ne l'ont jamais vu, ses bulletins sont blancs comme neige, mais il continue de valider ses semestres..."
@@ -172,7 +163,7 @@ export const Poles: pole[] = [
         {
           name: "Eyal Gros",
           nickname: "Dr Salé",
-          desc: "Si vous tenez à votre audition, évitez de le contrarier"
+          desc: "Si vous tenez à votre audition, évitez de le contrarier, ou de jouer à Pokémon avec lui"
         }
       ]
     },

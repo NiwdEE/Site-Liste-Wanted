@@ -1,9 +1,26 @@
-<div *ngIf="Infos !== undefined">
-    <span>
-        {{Infos.name}} ({{Infos.nickname}}) <ng-container *ngIf="Infos.tag">[{{Infos.tag}}]</ng-container> 
-    </span>
-    <br/>
-    <span>
-        {{Infos.desc}}  
-    </span>
+<div class="card" *ngIf="who != undefined">
+    <div class="main">
+        <div class="image">
+            <img src="/assets/images/testmember.jpg"/>
+        </div>
+    </div>
+
+
+    <div class="infos">
+        <div class="name">
+            {{who.name}}
+        </div>
+        
+        <div class="nickname">
+            {{who.nickname}}
+        </div>
+
+        <div class="role" *ngIf="who.tag!=undefined">
+            {{who.tag}}
+        </div>
+
+        <div class="desc">
+            {{who.desc}}
+        </div>
+    </div>
 </div>

@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { HomeComponent } from './home/home.component';
 import { PaletteComponent } from './palette/palette.component';
+import { TestcardComponent } from './testcard/testcard.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: 'palette',
     component: PaletteComponent
+  },
+  {
+    path: 'tc',
+    component: TestcardComponent
   },
   {
     path: '**',

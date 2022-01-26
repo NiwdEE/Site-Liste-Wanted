@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private router: Router, public people: PeopleService){
     // console.log(people.Poles)
-    for(let i =0; i < 100; i++) this.A[i] = i;
+    for(let i = 0; i < 100; i++) this.A[i] = i;
 
     this.router.events.subscribe((val)=>{
       if(val instanceof Scroll){

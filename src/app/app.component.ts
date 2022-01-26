@@ -20,7 +20,7 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('scrollable') scrollable: ElementRef|undefined=undefined;
 
   constructor(public nav: NavService, public scroll: ScrollService){
-
+    
   }
 
   //Fonction pour Faire marcher et animer le router-outlet

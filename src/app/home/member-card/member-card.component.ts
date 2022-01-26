@@ -10,14 +10,14 @@ import { PeopleService } from '../people.service';
 export class MemberCardComponent implements OnInit {
   @Input() id: number|undefined = undefined;
 
-  Infos: member|undefined;
+  who: member|undefined;
 
   constructor(private people: PeopleService){
     
   }
 
   ngOnInit(): void {
-    this.Infos = this.people.getByID(this.id);
+    this.who = this.people.getByID(this.id);
   }
 
 }

@@ -10,7 +10,9 @@ export class PaletteComponent implements OnInit {
   pals = ['j', 'o', 'r', 'v', 'g'];
   nums = Array(9);
 
-  constructor() { }
+  constructor(){
+    
+  }
 
   ngOnInit(): void {
   }
