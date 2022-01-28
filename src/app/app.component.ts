@@ -20,7 +20,7 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('scrollable') scrollable: ElementRef|undefined=undefined;
 
   constructor(public nav: NavService, public scroll: ScrollService){
-    
+    console.error('%cAttention !\n⚠️  ⚠️  ⚠️\nGarder le devtool ouvert risque de nuire gravement aux performances du site !\n⚠️  ⚠️  ⚠️', 'color: #ff2121');
   }
 
   //Fonction pour Faire marcher et animer le router-outlet

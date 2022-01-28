@@ -11,6 +11,10 @@ import { PaletteComponent } from './palette/palette.component';
 import { MemberCardComponent } from './home/member-card/member-card.component';
 import { TestcardComponent } from './testcard/testcard.component';
 
+
+import { CardPreviewDirective } from './misc/card-preview.directive';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +23,10 @@ import { TestcardComponent } from './testcard/testcard.component';
     NavComponent,
     PaletteComponent,
     MemberCardComponent,
-    TestcardComponent
+    TestcardComponent,
+
+    //Directives
+    CardPreviewDirective
   ],
   imports: [
     BrowserModule,

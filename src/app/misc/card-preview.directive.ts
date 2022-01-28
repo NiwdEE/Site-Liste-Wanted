@@ -1,5 +1,5 @@
 import { Directive, ElementRef, HostBinding, HostListener } from '@angular/core';
-import { abs } from '../services/common';
+import { abs } from './common';
 
 @Directive({
   selector: '[CardPreview]'
@@ -14,13 +14,13 @@ export class CardPreviewDirective {
   
   @HostBinding('style.transition') transition = '';
 
-  @HostBinding('style.--C') shadowColor = '';
+  @HostBinding('style.--c') shadowColor = '';
 
-  @HostBinding('style.--Y') Y: number | '' = '';
+  @HostBinding('style.--y') Y: number | '' = '';
 
 
   @HostListener('mouseenter') onEnter(){
-    this.tranformation = 'scale(1.75)';
+    this.tranformation = 'scale(1.25)';
     this.transition = 'transform .4s all 0s';
   }
 
@@ -47,7 +47,7 @@ export class CardPreviewDirective {
       this.shadowColor = '0, 0, 0';
     }
 
-    this.tranformation =  'scale(1.75) perspective(300px) rotateY(' + mouseX * 15 + 'deg) rotateX('+ mouseY * -15 +'deg)';
+    this.tranformation =  'scale(1.25) perspective(300px) rotateY(' + mouseX * 5 + 'deg) rotateX('+ mouseY * -5 +'deg)';
   }
 
 

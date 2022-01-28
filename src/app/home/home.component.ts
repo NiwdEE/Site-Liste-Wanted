@@ -10,20 +10,15 @@ import { PeopleService } from './people.service';
 })
 export class HomeComponent implements OnInit {
 
-
-  A = new Array(100);
-
   constructor(private router: Router, public people: PeopleService){
-    // console.log(people.Poles)
-    for(let i = 0; i < 100; i++) this.A[i] = i;
-
-    this.router.events.subscribe((val)=>{
-      if(val instanceof Scroll){
-        if(val.anchor == null && val.routerEvent.url=="/"){
-          document.getElementById("mainPannel")?.scrollIntoView({behavior: 'smooth'})
-        }
-      }
-    })
+    
+    // this.router.events.subscribe((val)=>{
+    //   if(val instanceof Scroll){
+    //     if(val.anchor == null && val.routerEvent.url=="/"){
+    //       document.getElementById("mainPannel")?.scrollIntoView({behavior: 'smooth'})
+    //     }
+    //   }
+    // })
   }
 
   ngOnInit(): void {
