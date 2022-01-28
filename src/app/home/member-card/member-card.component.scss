@@ -33,16 +33,26 @@
             .name{
                 position: absolute;
                 width: 100%;
+                height: 78px;
                 left: 0;
-                bottom: -5px;
+                bottom: 0px;
 
-                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
 
                 font-size: 35px;
-                font-family: 'Docktrin';
+                font-family: 'Saddle Bag';
 
                 color: black;
-                transform: translateY(-50%);
+
+                & > span{
+                    width: 100%;
+
+                    text-align: center;
+                }
+
+                
             }
         }
 
