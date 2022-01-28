@@ -1,15 +1,22 @@
-<div class="card" *ngIf="who != undefined">
+<div class="card" *ngIf="who != undefined" [class]="{'wanted':wanted}">
     <div class="main">
         <div class="image">
             <img src="/assets/images/testmember.jpg"/>
+        </div>
+
+        <div class="ath">
+            <img src="/assets/images/ath_wanted.png"/>
+            <span class="name">
+                {{who.name}}
+            </span>
         </div>
     </div>
 
 
     <div class="infos">
-        <div class="name">
+        <!-- <div class="name">
             {{who.name}}
-        </div>
+        </div> -->
         
         <div class="nickname">
             {{who.nickname}}

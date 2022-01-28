@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { member } from '../people'
 import { PeopleService } from '../people.service';
 
@@ -8,9 +8,20 @@ import { PeopleService } from '../people.service';
   styleUrls: ['./member-card.component.scss']
 })
 export class MemberCardComponent implements OnInit {
+
   @Input() id: number|undefined = undefined;
 
+  @HostListener('mouseenter') mouseEnter($evt:any){
+    this.wanted = true;
+  };
+
+  @HostListener('mouseleave') mouseLeave($evt:any){
+    this.wanted = false;
+  };
+
   who: member|undefined;
+
+  wanted: boolean = false;
 
   constructor(private people: PeopleService){
     

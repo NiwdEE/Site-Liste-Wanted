@@ -9,13 +9,49 @@
         width: 100%;
         height: 100%;
 
+        div > img{
+            max-height: 100%;
+            max-width: 100%;
+        }
+
         .image{
             width: 100%;
             height: 100%;
-            & > img{
-                max-height: 100%;
-                max-width: 100%;
+        }
+
+        .ath{
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            transition: .3s;
+
+            .name{
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: -5px;
+
+                text-align: center;
+
+                font-size: 35px;
+                font-family: 'Docktrin';
+
+                color: black;
+                transform: translateY(-50%);
             }
+        }
+
+    }
+
+    &.wanted{
+        .main .ath{
+            opacity: 1;
+            transition: .3s;
         }
     }
 

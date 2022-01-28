@@ -72,8 +72,8 @@
                     height: 100%;
                     // transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
                     transition-property: width, height;
-                    transition-duration: .5s, .3s;
-                    transition-delay: 0s, .5s;
+                    transition-duration: .25s, .15s;
+                    transition-delay: 0s, .25s;
                 }
     
                 &::after{
