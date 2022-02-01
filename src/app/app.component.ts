@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, ViewChild, ViewEncapsulation } from '@angular/core';
 import { Router, RouterOutlet, NavigationEnd, Scroll } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 
@@ -19,6 +19,11 @@ export class AppComponent implements AfterViewInit {
   
   @ViewChild('scrollable') scrollable: ElementRef|undefined=undefined;
 
+  @HostListener('mousemove', ['$event']) onMouseMove($event: any){
+    // console.log($event)
+    this.nav.showBar = $event.clientY < 250
+  } 
+
   constructor(public nav: NavService, public scroll: ScrollService){
     console.error('%cAttention !\n⚠️  ⚠️  ⚠️\nGarder le devtool ouvert risque de nuire gravement aux performances du site !\n⚠️  ⚠️  ⚠️', 'color: #ff2121');
   }
@@ -30,5 +35,7 @@ export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.scroll.setScrollable(this.scrollable);
+    this.scroll.ready();
+    
   }
 }

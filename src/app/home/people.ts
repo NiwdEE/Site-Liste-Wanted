@@ -30,7 +30,6 @@ const Libre = [
   
   /*
   Personnes à qui demander une explication de leur surnom:
-    Sophia
     Marie T
     Margot
     Ludivine
@@ -106,12 +105,12 @@ export const Poles: pole[] = [
         {
           name: "Mattéo R.",
           nickname: "IKEA",
-          desc: "Vous avez besoin de chaises, d'une table ou d'un lit ? Vous savez ou chercher..."
+          desc: "Vous avez besoin de chaises, d'une table ou d'un lit ? Vous savez où chercher..."
         },
         {
           name: "Sophia M.",
           nickname: "Dr Water",
-          desc: ""
+          desc: "Jamais sans sa bouteille"
         },
         {
           name: "Ayann MS.",
@@ -170,6 +169,11 @@ export const Poles: pole[] = [
           name: "Eyal G.",
           nickname: "Dr Salé",
           desc: "Si vous tenez à votre audition, évitez de le contrarier, ou de jouer à Pokémon avec lui"
+        },
+        {
+          name: "Florian",
+          nickname: "poti blagueur",
+          desc: "zgefrerg"
         }
       ]
     },

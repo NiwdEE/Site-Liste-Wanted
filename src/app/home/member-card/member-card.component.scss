@@ -4,82 +4,138 @@
     aspect-ratio: 3/4;
     overflow: hidden;
 
+    font-family: 'Saddle Bag';
 
-    .main{
+    .content{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        transform-style: preserve-3d;
+        
+        transition: 1s;
+
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            border-radius: 15px;
+
+            background: linear-gradient(rgba(var(--c), calc(0.25 * var(--y))) 0%, rgba(var(--c), 0) 75%);
+        }
+    }
+
+    .face{
+        position: absolute;
         width: 100%;
         height: 100%;
 
-        div > img{
-            max-height: 100%;
-            max-width: 100%;
-        }
+        border-radius: 15px;
+        overflow: hidden;
 
-        .image{
-            width: 100%;
-            height: 100%;
-        }
-
-        .ath{
-            position: absolute;
-            opacity: 0;
-            top: 0;
-            left: 0;
-
-            width: 100%;
-            height: 100%;
-
-            transition: .3s;
-
-            .name{
-                position: absolute;
-                width: 100%;
-                height: 78px;
-                left: 0;
-                bottom: 0px;
-
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-
-                font-size: 35px;
-                font-family: 'Saddle Bag';
-
-                color: black;
-
-                & > span{
-                    width: 100%;
-
-                    text-align: center;
-                }
-
-                
-            }
-        }
-
+        backface-visibility: hidden;
+ 
     }
 
-    &.wanted{
-        .main .ath{
-            opacity: 1;
-            transition: .3s;
-        }
+    &.wanted .ath{
+        opacity: 1;
+        transition: .3s;
     }
 
+    &.desc .content{
+        transform: rotateY(0.5turn);
+    }
+
+}
+
+.front{
+
+    div > img{
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    .image{
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+.back{
+    background-color: beige;
+    transform: rotateY(.5turn);
 
     .infos{
         position: absolute;
-        bottom: 0;
+        top: 0;
         left: 0;
-        transform: translateY(100%);
-        z-index: 1;
+        
+        width: 100%;
+        height: 100%;
 
-        transition: 0.2s;
-    }
+        display: flex;
+        flex-direction: column;
 
-    &:hover{
-        .infos{
-            transform: translateY(0);
-            transition: 0.5s;
+        color: black;
+
+
+        .half{
+            width: auto;
+            height: 50%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+            text-align: center;
         }
+
+        .upper{
+            font-size: 30px;
+        }
+
+        .lower{
+            font-size: 22px;
+            padding: 0 7px; 
+        }
+    }
+}
+
+.ath{
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    transition: .3s;
+
+    .name{
+        position: absolute;
+        width: 100%;
+        height: 78px;
+        left: 0;
+        bottom: 0px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        font-size: 1.875rem;
+
+        color: black;
+
+        & > span{
+            width: 100%;
+
+            text-align: center;
+        }
+        
     }
 }

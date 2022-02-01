@@ -44,20 +44,8 @@
             .member{
                 position: relative;
 			    transition: .3s;
-                margin: 30px;
+                margin: 50px;
                 overflow: hidden;
-                border-radius: 15px;
-			
-                &::after{
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 100%;
-                    width: 100%;
-        
-                    background: linear-gradient(rgba(var(--c), calc(0.33 * var(--y))) 0%, rgba(var(--c), 0) 75%);
-                }
             }
         }
     }

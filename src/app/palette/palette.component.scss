@@ -1,5 +1,8 @@
 .FullPage{
-    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: calc(100vh - 100px);
     width: 100%;
     display: flex;
     flex-direction: column;

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { HostListener, Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
@@ -8,6 +8,8 @@ export class NavService {
 
   $parentScroll = new BehaviorSubject<number>(0);
 
+  showBar: boolean = true;
+  
 
   constructor(){
 

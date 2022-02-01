@@ -13,6 +13,7 @@ import { TestcardComponent } from './testcard/testcard.component';
 
 
 import { CardPreviewDirective } from './misc/card-preview.directive';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { CardPreviewDirective } from './misc/card-preview.directive';
     TestcardComponent,
 
     //Directives
-    CardPreviewDirective
+    CardPreviewDirective,
+      FooterComponent
   ],
   imports: [
     BrowserModule,

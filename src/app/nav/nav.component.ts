@@ -10,9 +10,6 @@ import { NavService } from './nav.service';
 })
 export class NavComponent implements OnInit {
 
-  parentScroll: number = 0;
-
-
   Navs = [
     {
       name: "Accueil",
@@ -20,14 +17,16 @@ export class NavComponent implements OnInit {
       goto: "home"
     },
     {
+      name: "Trailer",
+      path: '',
+      goto: 'trailer'
+    },
+    {
       name: "Membres",
       path: '',
       goto: "members"
     },
-    {
-      name: "Trailer",
-      path: "test"
-    },
+    
     {
       name: "Défis",
       path: "test"
@@ -47,9 +46,6 @@ export class NavComponent implements OnInit {
 
 	constructor(public nav: NavService, private router: Router){
 
-    nav.$parentScroll.subscribe(val=>{
-      this.parentScroll = val;
-    })
   }
 
   navigate(path: string, goto: string|undefined){
@@ -60,7 +56,7 @@ export class NavComponent implements OnInit {
     this.hoverNav[navID] = 2;
     setTimeout(()=>{
       this.hoverNav[navID]--;
-    }, 900)
+    }, 450)
   }
 
   unhover(navID: number){
