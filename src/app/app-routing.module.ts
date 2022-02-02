@@ -4,7 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { HomeComponent } from './home/home.component';
 import { PaletteComponent } from './palette/palette.component';
-import { TestcardComponent } from './testcard/testcard.component';
 import { VoyagesComponent } from './voyages/voyages.component';
 
 const routes: Routes = [
@@ -28,17 +27,17 @@ const routes: Routes = [
     component: PaletteComponent
   },
   {
-    path: 'tc',
-    component: TestcardComponent
-  },
-  {
     path: '**',
     component: FourOhFourComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,  {useHash: false, onSameUrlNavigation: 'reload', scrollPositionRestoration: 'enabled'})],
+  imports: [RouterModule.forRoot(routes,  {
+    useHash: false,
+    onSameUrlNavigation: 'reload',
+    scrollPositionRestoration: 'enabled',
+  })],
   exports: [RouterModule],
   providers: [{provide: LocationStrategy, useClass: PathLocationStrategy}]
 })

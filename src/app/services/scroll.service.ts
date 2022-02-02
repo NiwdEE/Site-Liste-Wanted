@@ -1,5 +1,5 @@
 import { ElementRef, Injectable } from '@angular/core';
-import { Router, Scroll } from '@angular/router';
+import { NavigationEnd, NavigationStart, Router, Scroll } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -14,14 +14,30 @@ export class ScrollService {
   //Scroll en attente (si la page n'a pas fini de charger)
   pendingScroll: string|undefined = undefined;
 
+  //Permet de savoir si une navigation est en cours
+  pendingNavID: number|undefined = undefined;
+
   readyToScroll: boolean = false;
 
   constructor(private router: Router){
     this.router.events.subscribe((val)=>{
-      console.log(val)
+      // console.log(val)
       if(val instanceof Scroll && val.anchor){
         // console.log(val)
         this.scrollToAnchor(val.anchor)
+      }
+
+      if(val instanceof NavigationStart){
+        this.pendingNavID = val.id;
+        this.unready();
+      }
+
+      if(val instanceof NavigationEnd){
+        if(val.id === this.pendingNavID){
+          this.ready();
+        }
+
+        this.pendingNavID = undefined;
       }
     })
   }
@@ -51,7 +67,7 @@ export class ScrollService {
 
     // let Ypos = el.getBoundingClientRect().top
     let Ypos = el.offsetTop;
-
+    // console.log(Ypos)
     this.scrollToPos(Ypos)
   }
 
@@ -67,11 +83,19 @@ export class ScrollService {
     this.pendingScroll = undefined;
   }
 
+
+  //Pour éviter de scroller quand ce n'est pas encore possible :)
   ready(){
     setTimeout(()=>{
       this.readyToScroll = true
       this.checkPendingScroll()
     }, 10)
   }
+
+  unready(){
+    this.readyToScroll = false
+  }
+
+
 
 }
