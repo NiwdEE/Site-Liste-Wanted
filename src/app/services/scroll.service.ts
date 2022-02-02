@@ -1,6 +1,5 @@
 import { ElementRef, Injectable } from '@angular/core';
 import { Router, Scroll } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +18,7 @@ export class ScrollService {
 
   constructor(private router: Router){
     this.router.events.subscribe((val)=>{
+      console.log(val)
       if(val instanceof Scroll && val.anchor){
         // console.log(val)
         this.scrollToAnchor(val.anchor)
@@ -51,6 +51,7 @@ export class ScrollService {
 
     // let Ypos = el.getBoundingClientRect().top
     let Ypos = el.offsetTop;
+
     this.scrollToPos(Ypos)
   }
 

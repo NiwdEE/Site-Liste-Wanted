@@ -1,6 +1,6 @@
-<div class="scroll" id="fullpage" #scrollable (scroll)="nav.onScroll($event)">
+<div class="scroll" id="fullpage" (scroll)="nav.onScroll($event)">
 
-  <div appNav class="Navigation">
+  <div appNav class="Navigation" [class]="nav.showBar?'bar':'menu'">
   
   </div>
 
@@ -9,7 +9,7 @@
   </div>
 
   
-  <div class="content" [@mainRouteAnimations]="prepareRoute(outlet)">
+  <div class="content" #scrollable [@mainRouteAnimations]="prepareRoute(outlet)">
     <router-outlet #outlet="outlet"></router-outlet>  
   </div>
 

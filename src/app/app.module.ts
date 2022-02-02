@@ -14,6 +14,7 @@ import { TestcardComponent } from './testcard/testcard.component';
 
 import { CardPreviewDirective } from './misc/card-preview.directive';
 import { FooterComponent } from './footer/footer.component';
+import { VoyagesComponent } from './voyages/voyages.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { FooterComponent } from './footer/footer.component';
 
     //Directives
     CardPreviewDirective,
-      FooterComponent
+      FooterComponent,
+      VoyagesComponent
   ],
   imports: [
     BrowserModule,

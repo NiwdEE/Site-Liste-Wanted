@@ -15,17 +15,17 @@ export class MemberCardComponent implements OnInit {
   wanted: boolean = false;
   turn: number = 0;
 
-  @HostListener('mouseenter') mouseEnter($evt:any){
+  @HostListener('mouseenter') onMouseEnter(){
     this.wanted = true;
   };
 
-  @HostListener('mouseleave') mouseLeave($evt:any){
+  @HostListener('mouseleave') onMouseLeave(){
     this.wanted = false;
-    // this.turn = 0;
+    this.turn = 0;
   };
 
-  @HostListener('click') onClick($evt: any){
-    this.turn = ~this.turn;
+  @HostListener('click') onClick(){
+    this.turn = (this.turn+1)%2;
   }
 
   who: member|undefined;

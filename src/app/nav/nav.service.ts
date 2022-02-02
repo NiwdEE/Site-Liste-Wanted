@@ -8,7 +8,9 @@ export class NavService {
 
   $parentScroll = new BehaviorSubject<number>(0);
 
-  showBar: boolean = true;
+  extend: boolean = true;
+
+  showBar: boolean = window.innerWidth > 1000;
   
 
   constructor(){

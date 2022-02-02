@@ -1,4 +1,4 @@
-<div class="bar noselect" [class]="{'show': nav.showBar}">
+<div class="bar noselect" [class]="{'extend': nav.extend}" *ngIf="nav.showBar; else navMenu">
 
     <div class="logo">
         <img src="/assets/images/logo.png" alt="Logo Wanted">
@@ -18,3 +18,12 @@
     </div>
 
 </div>
+
+<ng-template #navMenu>
+    <div class="menu">
+        <div class="showMenu">
+
+        </div>
+    </div>
+</ng-template>
+

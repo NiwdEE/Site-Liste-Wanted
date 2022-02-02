@@ -1,3 +1,17 @@
+@mixin lightFade(){
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+
+        background: linear-gradient(rgba(var(--c), calc(0.25 * var(--y))) 0%, rgba(var(--c), 0) 75%);
+    }
+}
+
 .card{
     position: relative;
     width: 300px;
@@ -13,18 +27,6 @@
         transform-style: preserve-3d;
         
         transition: 1s;
-
-        &::after{
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            border-radius: 15px;
-
-            background: linear-gradient(rgba(var(--c), calc(0.25 * var(--y))) 0%, rgba(var(--c), 0) 75%);
-        }
     }
 
     .face{
@@ -52,6 +54,8 @@
 
 .front{
 
+    @include lightFade();
+
     div > img{
         max-height: 100%;
         max-width: 100%;
@@ -66,42 +70,41 @@
 
 .back{
     background-color: beige;
+    
+    background: url(/assets/images/ath_back.png);
+    background-size: 100%;
+    
     transform: rotateY(.5turn);
 
-    .infos{
-        position: absolute;
-        top: 0;
-        left: 0;
-        
-        width: 100%;
-        height: 100%;
+    color: black;
+
+    @include lightFade();
+
+    .half{
+        width: auto;
+        height: 50%;
 
         display: flex;
         flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
 
-        color: black;
+        text-align: center;
+    }
 
+    .upper{
+        font-size: 30px;
 
-        .half{
-            width: auto;
-            height: 50%;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-
-            text-align: center;
+        .name{
+            font-size: 40px;
         }
+    }
 
-        .upper{
-            font-size: 30px;
-        }
+    .lower{
+        font-size: 25px;
+        padding: 0 7px;
 
-        .lower{
-            font-size: 22px;
-            padding: 0 7px; 
-        }
+        // text-rendering: geometricPrecision;
     }
 }
 
@@ -116,10 +119,10 @@
 
     transition: .3s;
 
-    .name{
+    .infos{
         position: absolute;
         width: 100%;
-        height: 78px;
+        height: 112px;
         left: 0;
         bottom: 0px;
 
@@ -127,7 +130,11 @@
         flex-direction: column;
         justify-content: space-around;
 
-        font-size: 1.875rem;
+        font-size: 1.75rem;
+
+        .name{
+            font-size: 2.42069rem;
+        }
 
         color: black;
 

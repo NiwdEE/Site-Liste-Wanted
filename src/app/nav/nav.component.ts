@@ -33,7 +33,7 @@ export class NavComponent implements OnInit {
     },
     {
       name: "Voyages",
-      path: "test"
+      path: "voyages"
     },
     {
       name: "Sponsors",

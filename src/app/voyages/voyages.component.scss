@@ -1,0 +1,44 @@
+
+.innerContent{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    transition: .5s;
+
+    &.hidden{
+        opacity: 0;
+    }
+}
+
+.carousel{
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+    width: 200%;
+
+    & > div{
+        height: 500px;
+        width: 500px;
+    }
+
+    #_1{
+        background-color: red;
+    }
+
+    #_2{
+        background-color: green;
+    }
+
+    #_3{
+        background-color: blue;
+    }
+}

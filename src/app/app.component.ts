@@ -19,10 +19,17 @@ export class AppComponent implements AfterViewInit {
   
   @ViewChild('scrollable') scrollable: ElementRef|undefined=undefined;
 
-  @HostListener('mousemove', ['$event']) onMouseMove($event: any){
+  @HostListener('mousemove', ['$event'])
+  onMouseMove($event: any){
     // console.log($event)
-    this.nav.showBar = $event.clientY < 250
+    this.nav.extend = $event.clientY < 250
   } 
+
+  @HostListener('window:resize', ['$event'])
+  onResize($event: any) {
+    this.nav.showBar = $event.target.innerWidth > 1000;
+    this.nav.extend = false;
+  }
 
   constructor(public nav: NavService, public scroll: ScrollService){
     console.error('%cAttention !\n⚠️  ⚠️  ⚠️\nGarder le devtool ouvert risque de nuire gravement aux performances du site !\n⚠️  ⚠️  ⚠️', 'color: #ff2121');
@@ -36,6 +43,5 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.scroll.setScrollable(this.scrollable);
     this.scroll.ready();
-    
   }
 }

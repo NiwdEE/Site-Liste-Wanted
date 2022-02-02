@@ -10,15 +10,8 @@ import { PeopleService } from './people.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router, public people: PeopleService){
-    
-    // this.router.events.subscribe((val)=>{
-    //   if(val instanceof Scroll){
-    //     if(val.anchor == null && val.routerEvent.url=="/"){
-    //       document.getElementById("mainPannel")?.scrollIntoView({behavior: 'smooth'})
-    //     }
-    //   }
-    // })
+  constructor(public people: PeopleService){
+
   }
 
   ngOnInit(): void {

@@ -83,8 +83,8 @@ export const Poles: pole[] = [
       members:[
         {
           name: "Martin V.",
-          nickname: "Vodkarambar",
-          desc: "Vous avez du parquais ? Il a des carambars !",
+          nickname: "Paul Khomme",
+          desc: "^-^",
           tag: "Respo Soirée"
         },
         {
@@ -163,7 +163,7 @@ export const Poles: pole[] = [
         {
           name: "Antoine M.",
           nickname: "Le truand",
-          desc: "Ses profs ne le connaissent pas, ses camarades ne l'ont jamais vu, ses bulletins sont blancs comme neige, mais il continue de valider ses semestres..."
+          desc: "Ses profs et ses camarades ne l'ont jamais vu, ses bulletins sont vides, mais il continue de valider ses semestres..."
         },
         {
           name: "Eyal G.",
