@@ -15,6 +15,9 @@ import { CardPreviewDirective } from './misc/card-preview.directive';
 import { FooterComponent } from './footer/footer.component';
 import { VoyagesComponent } from './voyages/voyages.component';
 
+import 'hammerjs';
+import { NgxHmCarouselModule } from 'ngx-hm-carousel';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +36,8 @@ import { VoyagesComponent } from './voyages/voyages.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxHmCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

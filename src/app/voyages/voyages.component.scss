@@ -1,44 +1,57 @@
+@import 'mixins';
 
-.innerContent{
-    position: relative;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-
-    transition: .5s;
-
-    &.hidden{
-        opacity: 0;
-    }
+.material-icons{
+    @include noselect();
 }
 
-.carousel{
-    position: absolute;
-    
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+$transition_time: 0.2s;
 
+.carousel {
+  color: white;
+  .content {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    
-    width: 200%;
 
-    & > div{
-        height: 500px;
-        width: 500px;
-    }
+    .item {
+      width: 100%;
+      padding: 0.5em;
+      display: block;
+      opacity: 0.5;
 
-    #_1{
-        background-color: red;
-    }
+      transition: opacity 0.295s linear $transition_time;
 
-    #_2{
-        background-color: green;
-    }
+      &.visible {
+        opacity: 1;
+      }
 
-    #_3{
-        background-color: blue;
+      .img {
+        width: 100%;
+        height: 400px;
+        display: block;
+        background-size: cover;
+        background-position: center;
+      }
     }
+  }
+
+  .ball {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: black;
+    border: 2px solid;
+    opacity: 0.5;
+
+    &.visible {
+      opacity: 1;
+    }
+  }
+
+  .click-area {
+    width: 50px;
+    text-align: center;
+
+    i {
+      font-size: 3em;
+    }
+  }
 }
