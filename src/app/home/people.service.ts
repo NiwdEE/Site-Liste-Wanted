@@ -46,4 +46,22 @@ export class PeopleService {
 
     return map;
   }
+
+  uid(id: number|undefined): string{
+
+    if(id === undefined) return "default";
+
+    //On récupère le nom
+    let name = this.getByID(id).name;
+
+    //On ne prend que le prénom (sauf pour les Maries)
+    let firstname = name.split(' ')[0];
+    if(firstname === "Marie") firstname = name.replace(' ', '_').replace('.', '');
+
+    //On retire les accents
+    firstname = firstname.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+    return firstname
+  }
+
 }

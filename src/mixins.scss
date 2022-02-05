@@ -7,6 +7,12 @@
     transform: translate(-$x_tr, -$y_tr);
 }
 
+@mixin centerChild(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin noselect {
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */

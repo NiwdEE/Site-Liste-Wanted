@@ -32,7 +32,7 @@ export class MemberCardComponent implements OnInit {
 
   
 
-  constructor(private people: PeopleService){
+  constructor(public people: PeopleService){
     
   }
 

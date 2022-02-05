@@ -131,7 +131,7 @@ export const Poles: pole[] = [
         {
           name: "Marie T.",
           nickname: "Before",
-          desc: ""
+          desc: "Pas encore partie, et déjà fumée"
         },
         {
           name: "Marien M.",
@@ -156,7 +156,8 @@ export const Poles: pole[] = [
         {
           name: "Edwin A.",
           nickname: "L'alchimiste",
-          desc: "Lui même ne sait pas ce qu'il met dans ses mélanges mais l'imporant c'est que c'est bon (et bien fort)",
+          // desc: "Lui même ne sait pas ce qu'il met dans ses mélanges mais l'imporant c'est que c'est bon (et bien fort)",
+          desc: "Des mélanges à vous en ravir le palais (moins le foie)",
           tag: "Respo Com'",
           id: 69
         },
@@ -171,9 +172,9 @@ export const Poles: pole[] = [
           desc: "Si vous tenez à votre audition, évitez de le contrarier, ou de jouer à Pokémon avec lui"
         },
         {
-          name: "Florian",
+          name: "Flo",
           nickname: "poti blagueur",
-          desc: "zgefrerg"
+          desc: "La réponse à tous les blancs !"
         }
       ]
     },
@@ -183,13 +184,13 @@ export const Poles: pole[] = [
         {
           name: "Marie TP.",
           nickname: "Britney",
-          desc: "",
+          desc: "Elle ne partage peut-être pas sa voix, mais sa gestion désastreuse de son argent",
           tag: "Respo Event"
         },
         {
           name: "Marion P.",
           nickname: "A Kroquer",
-          desc: "Avant d'acheter 520 bières, il aurait fallut penser au stockage"
+          desc: "Avant d'acheter 520 bières, il aurait fallut penser au stockage..."
         },
         {
           name: "Brayan K.",
@@ -230,7 +231,7 @@ export const Poles: pole[] = [
         {
           name: "Louise D.",
           nickname: "Mezaffaires",
-          desc: ""
+          desc: "Si vous trouvez un truc qui traine, c'est sûrement à elle"
         },
         {
           name: "Mohammed R.",
