@@ -98,11 +98,6 @@ export const Poles: pole[] = [
           desc: "Qu'est-ce qu'il fait là ? Un pûr hasard !"
         },
         {
-          name: "Hugo R.",
-          nickname: "Ghost Rider",
-          desc: "On suppose qu'il préfère sa moto aux réunions, mais on n'a jamais pu lui demander"
-        },
-        {
           name: "Mattéo R.",
           nickname: "IKEA",
           desc: "Vous avez besoin de chaises, d'une table ou d'un lit ? Vous savez où chercher..."
@@ -243,6 +238,11 @@ export const Poles: pole[] = [
     {
       name: "Pôle-Yvalent",
       members: [
+        {
+          name: "Hugo R.",
+          nickname: "Ghost Rider",
+          desc: "On suppose qu'il préfère sa moto aux réunions, mais on n'a jamais pu lui demander"
+        },
         {
           name: "Adam BC.",
           nickname: "Aladdin²",
