@@ -156,7 +156,7 @@ export const Poles: pole[] = [
         {
           name: "Edwin A.",
           nickname: "L'alchimiste",
-          // desc: "Lui même ne sait pas ce qu'il met dans ses mélanges mais l'imporant c'est que c'est bon (et bien fort)",
+          // desc: "Lui même ne sait pas ce qu'il met dans ses mélanges mais l'important c'est que c'est bon (et bien fort)",
           desc: "Des mélanges à vous en ravir le palais (moins le foie)",
           tag: "Respo Com'",
           id: 69
