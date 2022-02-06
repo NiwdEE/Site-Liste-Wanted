@@ -11,6 +11,12 @@ export class NavService {
   extend: boolean = true;
 
   showBar: boolean = window.innerWidth > 1000;
+
+  ea: number = 0;
+
+  eai(){
+    this.ea++;
+  }
   
 
   constructor(){

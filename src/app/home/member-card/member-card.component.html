@@ -3,7 +3,7 @@
         <div class="front face">
 
             <div class="image">
-                <img class="member" [src]="'/assets/images/members/'+ people.uid(who.id) +'.jpg'" onerror="this.onerror=null; this.src='/assets/images/members/default.jpg'"/>
+                <img class="member" [src]="'/assets/images/'+ (nav.ea>5?'random':'') +'members/'+ people.uid(who.id) +'.jpg'" onerror="this.onerror=null; this.src='/assets/images/members/default.jpg'"/>
             </div>
 
             <div class="ath">

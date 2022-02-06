@@ -124,7 +124,7 @@ export const Poles: pole[] = [
           tag: "Respo Voyage"
         },
         {
-          name: "Marie T.",
+          name: "Marie TR.",
           nickname: "Before",
           desc: "Pas encore partie, et déjà fumée"
         },
@@ -179,7 +179,7 @@ export const Poles: pole[] = [
         {
           name: "Marie TP.",
           nickname: "Britney",
-          desc: "Elle ne partage peut-être pas sa voix, mais sa gestion désastreuse de son argent",
+          desc: "Et pourtant elle ne sais pas chanter...",
           tag: "Respo Event"
         },
         {
@@ -225,7 +225,7 @@ export const Poles: pole[] = [
         },
         {
           name: "Louise D.",
-          nickname: "Mezaffaires",
+          nickname: "Mezaffaires ?",
           desc: "Si vous trouvez un truc qui traine, c'est sûrement à elle"
         },
         {

@@ -1,5 +1,6 @@
 import { ThisReceiver } from '@angular/compiler';
 import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { NavService } from 'src/app/nav/nav.service';
 import { member } from '../people'
 import { PeopleService } from '../people.service';
 
@@ -32,7 +33,7 @@ export class MemberCardComponent implements OnInit {
 
   
 
-  constructor(public people: PeopleService){
+  constructor(public people: PeopleService, public nav: NavService){
     
   }
 

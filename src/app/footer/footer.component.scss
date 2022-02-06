@@ -15,6 +15,13 @@
 
     margin-top: 50px;
 
+    a{
+        font-family: 'Buffalo Grunge';
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+    }
+
     &::before{
         content: '';
         position: absolute;
@@ -48,5 +55,28 @@
         align-items: center;
 
         font-size: 1.25em;
+    }
+}
+
+
+.popup{
+    position: fixed;
+    background-color: green;
+
+    border-radius: 20px;
+
+    right: 15px;
+    bottom: 15px;
+
+    padding: 1em;
+    font-family: 'Texas Tango';
+    font-size: 20px;
+
+    opacity: 0;
+    transition: .5s;
+
+    &.visible{
+        opacity: 1;
+        transition: .5s;
     }
 }

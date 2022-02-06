@@ -17,7 +17,9 @@ import { VoyagesComponent } from './voyages/voyages.component';
 
 import 'hammerjs';
 import { NgxHmCarouselModule } from 'ngx-hm-carousel';
+import { ClipboardModule } from 'ngx-clipboard';
 import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -39,6 +41,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     NgxHmCarouselModule,
+    ClipboardModule,
     FormsModule
   ],
   providers: [],
