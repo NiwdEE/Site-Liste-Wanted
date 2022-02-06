@@ -1,0 +1,72 @@
+
+<div class="innerContent">
+    <div class="carouselContainer">
+        <ngx-hm-carousel
+            [(ngModel)]="index"
+            [autoplay-speed]="2000"
+            [autoplay]="true"
+            [autoplay-direction]="'right'"
+            [show-num]="1.5"
+            [infinite]="true"
+            [between-delay]="2000"
+            [data]="Travels"
+            [aniTime]="200"
+            class="carousel">
+
+        <section ngx-hm-carousel-container class="content">
+            <article class="item" ngx-hm-carousel-item *ngFor="let Travel of Travels; let i = index" [class.active]="index===i">
+                <div class="travelBrief" [style.background-image]="'url(/assets/images/voyages/' + Travel.img + '.jpg'">
+                    <div class="travelInfos" [style.background-color]="Travel.color+'B0'">
+                        <div class="travelName">
+                            {{Travel.name}}
+                        </div>
+
+                        <div class="travelDesc" [innerHTML]="Travel.desc"></div>
+                    </div>
+                </div>
+            </article>
+            <ng-template #infiniteContainer></ng-template>
+        </section>
+
+        <ng-template #carouselContent let-Travel let-i="index">
+            <section class="content">
+                <article class="item" [class.active]="index===i">
+                    <div class="travelBrief" [style.background-image]="'url(/assets/images/voyages/' + Travel.img + '.jpg'">
+                        <div class="travelInfos" [style.background-color]="Travel.color+'B0'">
+                            <div class="travelName">
+                                {{Travel.name}}
+                            </div>
+    
+                            <div class="travelDesc" [innerHTML]="Travel.desc"></div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </ng-template>
+
+        <ng-template #carouselPrev>
+            <div class="click-area">
+                <span>
+                    <
+                </span>
+            </div>
+        </ng-template>
+        
+        <ng-template #carouselNext>
+            <div class="click-area">
+                <span>
+                    >
+                </span>
+            </div>
+        </ng-template>
+
+        <ng-template #carouselDot let-model>
+            <div class="balls">
+                <div class="ball" [class.active]="model.index === model.currentIndex"></div>
+            </div>
+        </ng-template>
+
+        </ngx-hm-carousel>
+    </div>
+    
+</div>
