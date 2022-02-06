@@ -1,57 +1,147 @@
 @import 'mixins';
-
-.material-icons{
-    @include noselect();
-}
-
 $transition_time: 0.2s;
 
-.carousel {
-  color: white;
-  .content {
-    display: flex;
+.innerContent{
+    position: absolute;
+    height: 100%;
+    width: 100%;
 
-    .item {
-      width: 100%;
-      padding: 0.5em;
-      display: block;
-      opacity: 0.5;
-
-      transition: opacity 0.295s linear $transition_time;
-
-      &.visible {
-        opacity: 1;
-      }
-
-      .img {
+    .carouselContainer{
+        height: 600px;
+        // height: 100%;
         width: 100%;
-        height: 400px;
-        display: block;
-        background-size: cover;
-        background-position: center;
-      }
+
+        @include center();
     }
-  }
-
-  .ball {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: black;
-    border: 2px solid;
-    opacity: 0.5;
-
-    &.visible {
-      opacity: 1;
-    }
-  }
-
-  .click-area {
-    width: 50px;
-    text-align: center;
-
-    i {
-      font-size: 3em;
-    }
-  }
 }
+
+.transition {
+	transition: all $transition_time ease-in-out;
+}
+
+.carousel {
+
+	display: flex;
+
+	.content {
+		display: flex;
+        flex-direction: row;
+        height: 100%;
+
+		.item {
+			width: 100%;
+            display: block;
+            padding: 0 25px;
+
+			// using delay to prevent left change show error
+			&.fade_animation {
+				transition: opacity 0.295s linear $transition_time;
+			}
+
+		}
+	}
+
+    &:hover .balls{
+        opacity: 1;
+        transition: .25s;
+    }
+
+    .balls{
+        opacity: 0;
+        
+        transition: 1s;
+        transition-delay: 1s;
+
+
+        .ball {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: black;
+            border: 2px solid;
+            opacity: 0.5;
+    
+            &.active {
+                opacity: 1;
+            }
+        }
+
+    }
+
+	
+
+	.progress {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 5px;
+		background: #ff5252;
+	}
+
+	.click-area {
+		width: 75px;
+        height: 75px;
+        border-radius: 75px;
+        background-color: #000000A0;
+		text-align: center;
+        cursor: pointer;
+
+		span{
+			font-size: 3em;
+            @include center();
+		}
+	}
+
+}
+
+.item.active .travelBrief:hover .travelInfos{
+    transform: translateX(0%);
+    transition: .5s;
+}
+
+.travelBrief {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .travelInfos{
+        height: 100%;
+        width: 75%;
+
+        color: black;
+
+        transform: translateX(-100%);
+        transition: .5s;
+
+        -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
+
+        .travelName{
+            text-align: center;
+            font-size: 100px;
+            font-family: 'Western Bang Bang';
+            // padding-right: 5em;
+        }
+
+        .travelDesc{            
+            position: absolute;
+            top: 25%;
+            left: 0;
+
+            width: 75%;
+            height: 50%;
+
+            padding-left: .69em;
+            font-size: 35px;
+            font-family: 'Saddle Bag';
+        }
+    }
+
+    
+}
+
+

@@ -17,6 +17,7 @@ import { VoyagesComponent } from './voyages/voyages.component';
 
 import 'hammerjs';
 import { NgxHmCarouselModule } from 'ngx-hm-carousel';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { NgxHmCarouselModule } from 'ngx-hm-carousel';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgxHmCarouselModule
+    NgxHmCarouselModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
