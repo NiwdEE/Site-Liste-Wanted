@@ -186,6 +186,16 @@ Diff Min/maj: O
 }
 
 
+@keyframes bounce{
+    from{
+        transform: scale(1);
+    }
+
+    to{
+        transform: scale(.5);
+    }
+}
+
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */

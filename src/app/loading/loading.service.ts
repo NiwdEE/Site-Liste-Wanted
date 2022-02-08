@@ -16,7 +16,6 @@ export class LoadingService {
 
   loading: boolean = true;
 
-  // loading: boolean = true;
 
   private $imagesLoading = new Subject<number>();
   private images: Map<HTMLElement, boolean> = new Map();

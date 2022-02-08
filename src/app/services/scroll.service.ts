@@ -28,17 +28,10 @@ export class ScrollService {
       }
 
       if(val instanceof NavigationStart){
-        this.pendingNavID = val.id;
         this.unready();
+        this.pendingNavID = val.id;
       }
 
-      if(val instanceof NavigationEnd){
-        if(val.id === this.pendingNavID){
-          this.ready();
-        }
-
-        this.pendingNavID = undefined;
-      }
     })
   }
 
@@ -73,7 +66,7 @@ export class ScrollService {
 
   scrollToPos(Ypos: number){
 
-    console.log(document.querySelectorAll('.innerComp'))
+    // console.log(document.querySelectorAll('.innerComp'))
 
     document.querySelectorAll('.innerComp')?.forEach(el => el.scrollTo({
       top: Ypos - 100, //On prend en compte la place prise par la navBar
@@ -96,7 +89,8 @@ export class ScrollService {
   }
 
   unready(){
-    this.readyToScroll = false
+    this.readyToScroll = false;
+    console.log('not ready');
   }
 
 

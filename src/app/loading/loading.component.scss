@@ -18,4 +18,12 @@
 
 
     @include centerChild();
+
+    flex-direction: column;
+
+    img{
+        width: 200px;
+
+        animation: bounce .75s infinite alternate ease-in-out;
+    }
 }

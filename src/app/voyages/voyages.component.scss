@@ -6,12 +6,35 @@ $transition_time: 0.2s;
     height: 100%;
     width: 100%;
 
+
+    .innerContent{
+
+        @include center();
+
+        width: 100%;
+
+    }
+    
+    .title{
+        width: 100%;
+        margin: 25px 0;
+
+        text-align: center;
+
+        font-size: 5em;
+        font-family: 'Western Bang Bang';
+    }
+
     .carouselContainer{
-        height: 600px;
+
+        position: relative;
+        // bottom: 10%;
+        // left: 0;
+
+        height: 50vh;
         // height: 100%;
         width: 100%;
 
-        @include center();
     }
 }
 
@@ -31,7 +54,7 @@ $transition_time: 0.2s;
 		.item {
 			width: 100%;
             display: block;
-            padding: 0 25px;
+            padding: 0 80px;
 
 			// using delay to prevent left change show error
 			&.fade_animation {
@@ -117,8 +140,8 @@ $transition_time: 0.2s;
         transform: translateX(-100%);
         transition: .5s;
 
-        -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
-        clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
 
         .travelName{
             text-align: center;
