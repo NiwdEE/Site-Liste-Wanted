@@ -1,15 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { ClipboardService } from 'ngx-clipboard';
+import { trigger, style, animate, transition, animateChild, query, group } from '@angular/animations';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
+  styleUrls: ['./footer.component.scss'],
+  animations: [
+    trigger('FadeIO', [
+
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('0.2s ease-in-out', style({opacity: 1}))
+      ]),
+
+      transition(':leave', [
+        style({ opacity: 1 }),
+        animate('0.2s ease-in-out', style({opacity: 0}))
+      ])
+    ])
+  ]
 })
 export class FooterComponent implements OnInit {
 
   showPopup = false;
-  opa = false
 
   constructor(private clipboard: ClipboardService){
 
@@ -22,14 +36,7 @@ export class FooterComponent implements OnInit {
     this.clipboard.copy('listewanted@gmail.com')
 
     setTimeout(() => {
-      this.opa = true;
-    }, 50);
-
-    setTimeout(() => {
-      this.opa = false;
-      setTimeout(() => {
-        this.showPopup = false;
-      }, 500);
+      this.showPopup = false;
     }, 1500);
   }
 

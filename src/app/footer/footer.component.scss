@@ -72,11 +72,4 @@
     font-family: 'Texas Tango';
     font-size: 20px;
 
-    opacity: 0;
-    transition: .5s;
-
-    &.visible{
-        opacity: 1;
-        transition: .5s;
-    }
 }

@@ -83,8 +83,8 @@ export const Poles: pole[] = [
       members:[
         {
           name: "Martin V.",
-          nickname: "Paul Khomme",
-          desc: "^-^",
+          nickname: "Polkomsoulburo",
+          desc: "En plus de faire tout le boulot, il s'est fait la prez",
           tag: "Respo Soirée"
         },
         {

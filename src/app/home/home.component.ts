@@ -1,6 +1,10 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, OnInit, QueryList, ViewChildren, ViewEncapsulation } from '@angular/core';
 import { Router, Scroll } from '@angular/router';
+import { forkJoin } from 'rxjs';
+import { ImgLoadingDirective } from '../loading/img-loading.directive';
+import { LoadingService } from '../loading/loading.service';
 import { PeopleService } from './people.service';
+
 
 @Component({
   selector: 'app-home',
@@ -10,11 +14,14 @@ import { PeopleService } from './people.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public people: PeopleService){
+  
+
+  constructor(public people: PeopleService, private loading: LoadingService){
 
   }
 
   ngOnInit(): void {
   }
+  
 
 }

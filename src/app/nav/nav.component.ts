@@ -14,19 +14,17 @@ export class NavComponent implements OnInit {
     {
       name: "Accueil",
       path: '',
-      goto: "home"
-    },
-    {
-      name: "Trailer",
-      path: '',
-      goto: 'trailer'
+      // goto: "home"
     },
     {
       name: "Membres",
       path: '',
-      goto: "members"
+      goto: "membres"
     },
-    
+    {
+      name: "Trailer",
+      path: 'trailer',
+    },
     {
       name: "Défis",
       path: "test"

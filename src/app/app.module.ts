@@ -19,6 +19,8 @@ import 'hammerjs';
 import { NgxHmCarouselModule } from 'ngx-hm-carousel';
 import { ClipboardModule } from 'ngx-clipboard';
 import { FormsModule } from '@angular/forms';
+import { LoadingComponent } from './loading/loading.component';
+import { ImgLoadingDirective } from './loading/img-loading.directive';
 
 
 
@@ -34,7 +36,9 @@ import { FormsModule } from '@angular/forms';
     //Directives
     CardPreviewDirective,
       FooterComponent,
-      VoyagesComponent
+      VoyagesComponent,
+      LoadingComponent,
+      ImgLoadingDirective
   ],
   imports: [
     BrowserModule,
@@ -44,7 +48,9 @@ import { FormsModule } from '@angular/forms';
     ClipboardModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
