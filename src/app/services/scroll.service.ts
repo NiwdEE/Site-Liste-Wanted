@@ -62,7 +62,7 @@ export class ScrollService {
     }
     
     let el = document.getElementById(anchor);
-
+    // console.log(el)
     if(!el) return;
 
     // let Ypos = el.getBoundingClientRect().top
@@ -72,10 +72,13 @@ export class ScrollService {
   }
 
   scrollToPos(Ypos: number){
-    this.toScroll?.nativeElement.scrollTo({
+
+    console.log(document.querySelectorAll('.innerComp'))
+
+    document.querySelectorAll('.innerComp')?.forEach(el => el.scrollTo({
       top: Ypos - 100, //On prend en compte la place prise par la navBar
       behavior: "smooth"
-    });
+    }));
   }
 
   checkPendingScroll(){

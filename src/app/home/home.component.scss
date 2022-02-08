@@ -8,16 +8,15 @@
     background-position-y: 0;
 }
 
-.inner{
-    // height: 100%;
-    width: 100%;
+.innerComp{
+    position: relative;
 
-    display: flex;
-    flex-direction: column;
+    height: 100%;
+    width: 100%;
 }
 
 
-#members{
+#membres{
     display: flex;
     width: 100%;
 

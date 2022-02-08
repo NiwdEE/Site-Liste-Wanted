@@ -63,7 +63,10 @@ html{
     height: 100%;
 }
 
-.scroll{
+.innerComp{
+    overflow-y: scroll;
+    overflow-x: hidden;
+
     &::-webkit-scrollbar {
         width: 10px;
     }
