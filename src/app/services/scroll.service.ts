@@ -19,6 +19,8 @@ export class ScrollService {
 
   readyToScroll: boolean = false;
 
+  previousPath: string|undefined = undefined;
+
   constructor(private router: Router){
     this.router.events.subscribe((val)=>{
       // console.log(val)
@@ -28,8 +30,19 @@ export class ScrollService {
       }
 
       if(val instanceof NavigationStart){
-        this.unready();
-        this.pendingNavID = val.id;
+        
+        if(this.urlToPath(val.url) !== this.previousPath){
+          this.unready();
+          this.pendingNavID = val.id;
+        }
+
+        if(val.url == '/' && this.previousPath == '/'){
+          this.scrollToPos(0)
+        }
+      }
+
+      if(val instanceof NavigationEnd){
+        this.previousPath = this.urlToPath(val.url);  
       }
 
     })
@@ -65,9 +78,6 @@ export class ScrollService {
   }
 
   scrollToPos(Ypos: number){
-
-    // console.log(document.querySelectorAll('.innerComp'))
-
     document.querySelectorAll('.innerComp')?.forEach(el => el.scrollTo({
       top: Ypos - 100, //On prend en compte la place prise par la navBar
       behavior: "smooth"
@@ -93,6 +103,9 @@ export class ScrollService {
     console.log('not ready');
   }
 
+  urlToPath(url: string): string{
+    return url.split("#")[0];
+  }
 
 
 }

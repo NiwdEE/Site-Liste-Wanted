@@ -1,4 +1,4 @@
-<div class="bar noselect" [class]="{'extend': nav.extend}" *ngIf="nav.showBar; else navMenu">
+<div class="bar noselect" [class]="{'extend': nav.extend && !(nav.$blockExtension|async)}" *ngIf="nav.showBar; else navMenu">
 
     <div class="logo">
         <img src="/assets/images/logo.png" alt="Logo Wanted">

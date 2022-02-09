@@ -21,6 +21,7 @@ import { ClipboardModule } from 'ngx-clipboard';
 import { FormsModule } from '@angular/forms';
 import { LoadingComponent } from './loading/loading.component';
 import { ImgLoadingDirective } from './loading/img-loading.directive';
+import { TrailerComponent } from './trailer/trailer.component';
 
 
 
@@ -38,7 +39,8 @@ import { ImgLoadingDirective } from './loading/img-loading.directive';
       FooterComponent,
       VoyagesComponent,
       LoadingComponent,
-      ImgLoadingDirective
+      ImgLoadingDirective,
+      TrailerComponent
   ],
   imports: [
     BrowserModule,

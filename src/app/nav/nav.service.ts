@@ -8,6 +8,8 @@ export class NavService {
 
   $parentScroll = new BehaviorSubject<number>(0);
 
+  $blockExtension = new BehaviorSubject<boolean>(false);
+
   extend: boolean = true;
 
   showBar: boolean = window.innerWidth > 1000;
@@ -20,6 +22,12 @@ export class NavService {
   
 
   constructor(){
+
+    this.$blockExtension.subscribe((val) => {
+      if(val){
+        this.extend = false;
+      }
+    })
 
   }
 
