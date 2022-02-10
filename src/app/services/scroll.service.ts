@@ -21,6 +21,8 @@ export class ScrollService {
 
   previousPath: string|undefined = undefined;
 
+  // showAnim: boolean = false
+
   constructor(private router: Router){
     this.router.events.subscribe((val)=>{
       // console.log(val)

@@ -1,0 +1,14 @@
+
+.innerComp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Western Bang Bang';
+    font-size: 125px;
+
+    & > span{
+        font-size: 250px;
+    }
+}
