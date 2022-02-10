@@ -7,7 +7,7 @@ import { PeopleService } from '../people.service';
 @Component({
   selector: '[memberCard]',
   templateUrl: './member-card.component.html',
-  styleUrls: ['./member-card.component.scss']
+  styleUrls: ['./member-card.component.scss'],
 })
 export class MemberCardComponent implements OnInit {
 

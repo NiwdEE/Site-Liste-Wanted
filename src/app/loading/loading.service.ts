@@ -54,7 +54,7 @@ export class LoadingService {
     })
 
     this.$loading.subscribe((val)=>{
-      console.log(val)
+      // console.log(val)
       this.loading = (val !== 0)
     })
 

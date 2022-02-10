@@ -7,10 +7,12 @@
                     onerror="this.onerror=null; this.src='/assets/images/members/default.jpg'"/>
             </div>
 
+            <img class="fade" src="/assets/images/ath_back_old.png">
+
             <div class="ath">
 
-                <div class="old_image" [style]="who.offset?'--os:'+who.offset+'%':''">
-                    <img class="member" [src]="'/assets/images/members/'+ people.uid(who.id) +'.jpg'"
+                <div class="old_image">
+                    <img class="member" [src]="'/assets/images/members/old/'+ people.uid(who.id) +'.jpg'"
                     onerror="this.onerror=null; this.src='/assets/images/members/default.jpg'"/>
                 </div>
 

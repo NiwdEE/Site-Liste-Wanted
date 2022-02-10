@@ -3,8 +3,7 @@ export type member = {
     nickname: string,
     desc: string,
     tag?: string,
-    id?: number,
-    offset?: number
+    id?: number
 }
   
 export type pole = {
@@ -51,8 +50,7 @@ export const Poles: pole[] = [
           name: "Louis M.",
           nickname: "SDF",
           desc: "Si vous avez un toit pour ce soir, il est preneur !",
-          tag: "Vice-Président",
-          offset: 15
+          tag: "Vice-Président"
         },
         {
           name: "Matthieu T.",
@@ -64,22 +62,19 @@ export const Poles: pole[] = [
           name: "Philippe M.",
           nickname: "BDratC",
           desc: "Vous avez déjà entendu parler du BDAC ?",
-          tag: "Trésorier",
-          offset: 10
+          tag: "Trésorier"
         },
         {
           name: "Kévin F.",
           nickname: "Licorneuuuh",
           desc: "Heuuuu...",
-          tag: "Secrétaire",
-          offset: 20
+          tag: "Secrétaire"
         },
         {
           name: "Alicia B.",
           nickname: "Abadakor",
           desc: "",
-          tag: "Trésorière",
-          offset: 20
+          tag: "Trésorière"
         }
       ]
     },
@@ -90,14 +85,12 @@ export const Poles: pole[] = [
           name: "Martin V.",
           nickname: "Polkomsoulburo",
           desc: "En plus de faire tout le boulot, il s'est fait la prez",
-          tag: "Respo Soirée",
-          offset: 15
+          tag: "Respo Soirée"
         },
         {
           name: "Dorian F.",
           nickname: "Cheer'If 345",
-          desc: "Un sombre passé...",
-          offset: 10
+          desc: "Un sombre passé..."
         },
         {
           name: "Duncan B.",

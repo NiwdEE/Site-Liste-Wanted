@@ -100,7 +100,7 @@ export class ScrollService {
 
   unready(){
     this.readyToScroll = false;
-    console.log('not ready');
+    // console.log('not ready');
   }
 
   urlToPath(url: string): string{

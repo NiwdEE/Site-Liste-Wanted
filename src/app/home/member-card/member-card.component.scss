@@ -43,9 +43,17 @@
  
     }
 
-    &.wanted .ath{
-        opacity: 1;
-        transition: .3s;
+    &.wanted{
+        .ath{
+            opacity: 1;
+            transition: .3s;
+            transition-delay: .3s;
+        }
+
+        .fade{
+            opacity: 1;
+            transition: .3s ease-in;
+        }
     }
 
     &.desc .content{
@@ -57,6 +65,16 @@
 .front{
 
     @include lightFade();
+
+    .fade{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        opacity: 0;
+    }
 
     .ath{
 
@@ -71,29 +89,15 @@
 
             & > img{
                 position: absolute;
-                top: 22.5%;
+                top: 22.25%;
                 left: 50%;
 
                 transform: translate(-50%, calc(var(--os, 0%) * -1));
 
-                width: 120%;
+                width: 90%;
                 height: auto;
 
-                filter: saturate(.45);
-            }
-
-            &::after{
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-
-                // background-color: yellow;
-                background-image: url('/assets/images/members/old2.jpg');
-                filter: brightness(1.25);
-                opacity: .4;
+                // filter: saturate(.45);
             }
         }
 
