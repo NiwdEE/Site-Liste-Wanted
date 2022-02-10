@@ -162,13 +162,13 @@ export const Poles: pole[] = [
           desc: "Si vous tenez à votre audition, évitez de le contrarier, ou de jouer à Pokémon avec lui"
         },
         {
-          name: "Flo",
+          name: "Flo H.",
           nickname: "poti blagueur",
           desc: "La réponse à tous les blancs !"
         },
         {
-          name: "Aleena",
-          nickname: "Aleena",
+          name: "Aleena J.",
+          nickname: "Beurre sale",
           desc: ""
         }
       ]
