@@ -137,11 +137,6 @@ export const Poles: pole[] = [
           name: "Margot R.",
           nickname: "Câlin",
           desc: ""
-        },
-        {
-          name: "Samy LB.",
-          nickname: "Samy The Kid",
-          desc: ""
         }
       ]
     },
@@ -170,6 +165,11 @@ export const Poles: pole[] = [
           name: "Flo",
           nickname: "poti blagueur",
           desc: "La réponse à tous les blancs !"
+        },
+        {
+          name: "Aleena",
+          nickname: "Aleena",
+          desc: ""
         }
       ]
     },
@@ -244,8 +244,8 @@ export const Poles: pole[] = [
           desc: "On suppose qu'il préfère sa moto aux réunions, mais on n'a jamais pu lui demander"
         },
         {
-          name: "Adam BC.",
-          nickname: "Aladdin²",
+          name: "Samy LB.",
+          nickname: "Samy The Kid",
           desc: ""
         }
       ]
