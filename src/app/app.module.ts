@@ -22,6 +22,8 @@ import { FormsModule } from '@angular/forms';
 import { LoadingComponent } from './loading/loading.component';
 import { ImgLoadingDirective } from './loading/img-loading.directive';
 import { TrailerComponent } from './trailer/trailer.component';
+import { SponsorsComponent } from './sponsors/sponsors.component';
+import { ChallengesComponent } from './challenges/challenges.component';
 
 
 
@@ -40,7 +42,9 @@ import { TrailerComponent } from './trailer/trailer.component';
       VoyagesComponent,
       LoadingComponent,
       ImgLoadingDirective,
-      TrailerComponent
+      TrailerComponent,
+      SponsorsComponent,
+      ChallengesComponent
   ],
   imports: [
     BrowserModule,

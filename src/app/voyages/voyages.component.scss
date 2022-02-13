@@ -4,38 +4,37 @@ $transition_time: 0.2s;
 .innerComp{
 
     .innerContent{
-
-        @include center();
-
         width: 100%;
+        height: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+        justify-content: flex-start;
 
     }
     
     .title{
         width: 100%;
-        margin: 25px 0;
+        margin: 100px 0 50px 0;
 
         text-align: center;
 
         font-size: 5em;
         font-family: 'Western Bang Bang';
+
+        flex-grow: 0;
     }
 
     .carouselContainer{
-
-        position: relative;
-        // bottom: 10%;
-        // left: 0;
-
-        height: 50vh;
-        // height: 100%;
+        height: auto;
         width: 100%;
 
-    }
-}
+        padding-bottom: 75px;
 
-.transition {
-	transition: all $transition_time ease-in-out;
+        flex-grow: 1;
+
+    }
 }
 
 .carousel {

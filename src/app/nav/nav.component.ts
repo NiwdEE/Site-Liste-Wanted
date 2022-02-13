@@ -27,7 +27,7 @@ export class NavComponent implements OnInit {
     },
     {
       name: "Défis",
-      path: "test"
+      path: "defis"
     },
     {
       name: "Voyages",
@@ -35,7 +35,7 @@ export class NavComponent implements OnInit {
     },
     {
       name: "Sponsors",
-      path: "test"
+      path: "sponsors"
     }
   ]
 

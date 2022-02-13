@@ -1,0 +1,29 @@
+@import 'mixins';
+$transition_time: 0.2s;
+
+.innerComp{
+
+    .innerContent{
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+        justify-content: flex-start;
+
+    }
+    
+    .title{
+        width: 100%;
+        margin: 100px 0 50px 0;
+
+        text-align: center;
+
+        font-size: 5em;
+        font-family: 'Western Bang Bang';
+
+        flex-grow: 0;
+    }
+
+}
