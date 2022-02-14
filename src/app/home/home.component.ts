@@ -14,10 +14,14 @@ import { PeopleService } from './people.service';
 })
 export class HomeComponent implements OnInit {
 
-  
+  animRunning = true;
 
   constructor(public people: PeopleService, private loading: LoadingService){
 
+
+    setTimeout( () => {
+      this.animRunning = false;
+    }, 5000);
   }
 
   ngOnInit(): void {

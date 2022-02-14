@@ -1,4 +1,8 @@
+@import 'mixins';
+
 #home{
+    position: relative;
+
     width: 100%;
     height: 100vh;
     background-image: url('/assets/images/banner.png');
@@ -6,6 +10,38 @@
     background-position: center;
     background-size: cover;
     background-position-y: 0;
+
+    .hideme{
+        @include center();
+        
+        height: 50%;
+        width: 50%;
+
+        #animation{
+
+            @include center();
+    
+            max-width: 200%;
+            max-height: 200%;
+    
+            height: auto;
+            width: auto;
+
+            pointer-events: none;
+
+            opacity: 1;
+            transition: .5s;
+            transition-delay: .25s;
+
+        }
+
+        &:hover #animation:not(.running){
+            opacity: 0;
+
+            transition: .69s;
+        }
+    }
+
 }
 
 
