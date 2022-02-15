@@ -61,11 +61,15 @@
     }
 
     .vidContainer{
+        
         width: 75%;
-        height: 75%;
+        
+        height: auto;
+        max-height: 75%;
+
+        aspect-ratio: 16/9;
 
         z-index: 101;
 
-        // background-color: yellow;
     }
 }

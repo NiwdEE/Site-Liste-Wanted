@@ -16,12 +16,16 @@ export class HomeComponent implements OnInit {
 
   animRunning = true;
 
-  constructor(public people: PeopleService, private loading: LoadingService){
+  constructor(public people: PeopleService, public loading: LoadingService){
 
+    this.loading.$loading.subscribe((val)=>{
+      if(val === 0)
+        setTimeout( () => {
+          this.animRunning = false;
+        }, 5000);
+    })
 
-    setTimeout( () => {
-      this.animRunning = false;
-    }, 5000);
+    
   }
 
   ngOnInit(): void {

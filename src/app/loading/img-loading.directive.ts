@@ -14,7 +14,7 @@ export class ImgLoadingDirective {
 
   @HostListener('load')
   @HostListener('error')
-  onError() {
+  onEnd() {
     this.loading.stopLoadIMG(this.el.nativeElement);
   }
 

@@ -1,6 +1,10 @@
 @import 'mixins';
 $transition_time: 0.2s;
 
+.innerContent .transition {
+	transition: all $transition_time ease-in-out;
+}
+
 .innerComp{
 
     .innerContent{

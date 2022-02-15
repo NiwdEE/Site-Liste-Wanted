@@ -1,7 +1,9 @@
 <div class="innerComp">
     <div id="home">
-        <div class="hideme">
-            <img id="animation" [class]="{'running': animRunning}" src="/assets/images/animation.gif">
+        <div class="hideme" [class]="{'running': animRunning}">
+            <img id="animation" src="/assets/images/animation.gif" *ngIf="!loading.loading">
+            
+            <div class="background"></div>
         </div>
     </div>
 

@@ -8,9 +8,6 @@ export class ScrollService {
 
   RScrolls: {[route: string]: number|undefined} = {};
 
-  //Référence de l'élement à scroller
-  toScroll: ElementRef|undefined = undefined;
-
   //Scroll en attente (si la page n'a pas fini de charger)
   pendingScroll: string|undefined = undefined;
 
@@ -52,10 +49,6 @@ export class ScrollService {
 
   scrollRoute(route: string, scrollTo: number|undefined){
     this.RScrolls[route] = scrollTo;
-  }
-
-  setScrollable(el: ElementRef|undefined){
-    this.toScroll = el;
   }
 
   /**

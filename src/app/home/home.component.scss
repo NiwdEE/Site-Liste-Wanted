@@ -17,6 +17,11 @@
         height: 50%;
         width: 50%;
 
+
+        opacity: 1;
+        transition: .5s;
+        transition-delay: .15s;
+        
         #animation{
 
             @include center();
@@ -29,13 +34,27 @@
 
             pointer-events: none;
 
-            opacity: 1;
-            transition: .5s;
-            transition-delay: .25s;
+            z-index: 5;
+
+            
 
         }
 
-        &:hover #animation:not(.running){
+        .background{
+            background-color: var(--primary-theme);
+            
+            pointer-events: none;
+            
+
+            @include center();
+
+            height: 100vh;
+            width: 100vw;
+
+            opacity: .5;
+        }
+
+        &:hover:not(.running){
             opacity: 0;
 
             transition: .69s;

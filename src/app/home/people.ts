@@ -154,7 +154,7 @@ export const Poles: pole[] = [
         {
           name: "Antoine M.",
           nickname: "Le truand",
-          desc: "Ses profs et ses camarades ne l'ont jamais vu, ses bulletins sont vides, mais il continue de valider ses semestres..."
+          desc: "Si j'étais vous j'éviterai de le contrarier !"
         },
         {
           name: "Eyal G.",

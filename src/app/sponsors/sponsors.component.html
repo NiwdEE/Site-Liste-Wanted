@@ -8,10 +8,23 @@
         </div>
 
         <div class="sponsors">
-
+            <div class="row" *ngFor="let row of rowedSponsors">
+                <div class="sponsor" *ngFor="let sponsor of row" (click)="show(sponsor.id, $event)">
+                    <img [src]="sponsor.logo" class="logo" />
+                    <span>{{sponsor.name}}</span>
+                </div>
+            </div>
         </div>
 
        
     </div>
     
+</div>
+
+<div class="fullpageView" [@FadeIO]="showDesc != null">
+    <div class="background" (click)="show(undefined, null)"></div>
+    <div class="descContainer">
+
+    </div>
+
 </div>

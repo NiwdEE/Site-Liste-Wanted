@@ -35,8 +35,9 @@ export class AppComponent implements AfterViewInit, OnInit {
     this.nav.extend = false;
   }
 
-  constructor(public nav: NavService, public scroll: ScrollService, private activatedRoute: ActivatedRoute, private loading: LoadingService){
+  constructor(public nav: NavService, public scroll: ScrollService, private activatedRoute: ActivatedRoute, private router: Router){
     console.error('%cAttention !\n⚠️  ⚠️  ⚠️\nGarder le devtool ouvert risque de nuire gravement aux performances du site !\n⚠️  ⚠️  ⚠️', 'color: #ff2121');
+
   }
 
   //Fonction pour Faire marcher et animer le router-outlet
@@ -45,20 +46,8 @@ export class AppComponent implements AfterViewInit, OnInit {
   }
 
   ngAfterViewInit(): void {
-    this.scroll.setScrollable(this.scrollable);
     this.scroll.ready();
 
-    // if(this.images != null){
-
-    //   setInterval(()=>{
-    //     console.log(this.images)
-    //   }, 500)
-
-    //   forkJoin(this.images.map(imgDir => imgDir.loaded)).subscribe(() => {
-    //     console.log('all images have been loaded');
-    //     this.loading.stop();
-    //   });
-    // }
   }
 
 
