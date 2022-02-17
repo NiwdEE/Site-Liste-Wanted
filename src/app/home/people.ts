@@ -67,7 +67,7 @@ export const Poles: pole[] = [
         {
           name: "Kévin F.",
           nickname: "Licorneuuuh",
-          desc: "Heuuuu...",
+          desc: "Heuuuu... Il voulait une liste de licornes",
           tag: "Secrétaire"
         },
         {
@@ -170,7 +170,7 @@ export const Poles: pole[] = [
         {
           name: "Aleena J.",
           nickname: "Beurre sale",
-          desc: ""
+          desc: "Elle n'a pas besoin de beurre pour déraper"
         }
       ]
     },
@@ -201,12 +201,12 @@ export const Poles: pole[] = [
         {
           name: "Justine M.",
           nickname: "Murgence",
-          desc: ""
+          desc: "Une pls ? elle est là !"
         },
         {
           name: "Ludivine B.",
           nickname: "La Tisseuse",
-          desc: ""
+          desc: "Faites attention à ne pas être capturé dans sa toile"
         }
       ]
     },
@@ -222,7 +222,7 @@ export const Poles: pole[] = [
         {
           name: "Elie P.",
           nickname: "Sapologue",
-          desc: ""
+          desc: "Le style à l'état pur"
         },
         {
           name: "Louise D.",
@@ -232,7 +232,7 @@ export const Poles: pole[] = [
         {
           name: "Mohammed R.",
           nickname: "Jack",
-          desc: ""
+          desc: "Le meilleur déguisement du far west"
         }
       ]
     },
@@ -248,7 +248,7 @@ export const Poles: pole[] = [
         {
           name: "Samy LB.",
           nickname: "Samy The Kid",
-          desc: ""
+          desc: "C'est encore un enfant"
         },
         {
           name: "Rojojo",
@@ -260,7 +260,7 @@ export const Poles: pole[] = [
         {
           name: "Roxanne LB.",
           nickname: "Red Light",
-          desc: ""
+          desc: "Les feux rouges sont ses amis"
 
         },
 
