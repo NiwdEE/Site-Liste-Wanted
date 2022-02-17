@@ -31,7 +31,7 @@ $transition_time: 0.2s;
         text-align: center;
         color: black;
 
-        font-size: 5em;
+        font-size: 6em;
         font-family: 'Western Bang Bang';
 
         flex-grow: 0;
@@ -137,10 +137,11 @@ $transition_time: 0.2s;
 
     .descContainer{
         
-        height: 300px;
+        height: 400px;
         
         color: black;
 
+        border-radius: 6.9px;
 
 
         aspect-ratio: 5/4;
@@ -149,6 +150,52 @@ $transition_time: 0.2s;
 
         // background-color: yellow;
         background-image: url('/assets/images/ath_blank.png');
+
+        .infos{
+
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            .title{
+                flex-grow: 0;
+                width: 100%;
+                text-align: center;
+
+                margin-top: 10px;
+
+                font-size: 4em;
+                font-family: 'Western Bang Bang';
+        
+            }
+
+            .desc{
+                flex-grow: 1;
+                padding: 0 10px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                font-size: 1.5em;
+                font-family: 'Saddle Bag';
+
+                text-align: center;
+            }
+
+            .buttons{
+                flex-grow: 0;
+
+                font-size: 2.5em;
+                font-family: 'Western Bang Bang';
+
+                padding: 20px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
 
     }
 }

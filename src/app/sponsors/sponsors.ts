@@ -24,22 +24,24 @@ export const sponsors: sponsor[] = [
     },
     {
         name: "Pumpkin",
-        desc: "Vous propose des réductions grâce au code parrainage <b>Wanted</b>, et nous permettera d'avoir accès à une billeterie simple et éfficace",
-        logo: 'pumpkin.png'
+        desc: "Vous propose des réductions grâce au code parrainage Wanted, et nous permettera d'avoir accès à une billeterie simple et éfficace",
+        logo: 'pumpkin.png',
+        link: "https://pumpkin-app.co"
     },
     {
         name: "Bureau des goodies",
         desc: "Un super bon plan pour commander vous goodies en grandes quantités et à bon prix !",
-        logo: 'BDG.png'
+        logo: 'BDG.png',
+        link: "https://www.bureau-des-goodies.fr/"
     },
     {
         name: "Popout",
-        desc: "Une super application de bons plans sur Paris et ses alentours",
+        desc: "Une super application de bons plans sur Paris et ses alentours.",
         logo: 'pop_out.png'
     },
     {
         name: "Poppy’s",
-        desc: "Une excellente crèperie qui vous proposera un délicieux menu Wanted",
+        desc: "Une excellente crèperie qui vous proposera un délicieux menu Wanted.",
         logo: 'Poppy_s.png'
     },
     {
@@ -49,17 +51,18 @@ export const sponsors: sponsor[] = [
     },
     {
         name: "Permilike",
-        desc: "Une super auto-école située dans Cergy qui vous propose <b>une scéance d'évaluation gratuite</b> (d'une valeur de 44€)",
+        desc: "Une super auto-école située dans Cergy qui vous propose une scéance d'évaluation gratuite (d'une valeur de 44€).",
         logo: 'PermiLike.png'
     },
     {
-        name: "8tin-mar",
-        desc: 'un crack internationnal de classe c8',
-        logo: '/assets/images/members/Martin.jpg'
+        name: "Au pain du village",
+        desc: 'Une boulangerie près du port, qui vous offrerons des réductions sur leurs produits.',
+        logo: 'pdv.png',
+        link: "https://au-pain-du-village.business.site/"
     },
     {
-        name: "9tin-mar",
+        name: "BeEtudiant",
         desc: 'un crack internationnal de classe c9',
-        logo: '/assets/images/members/Martin.jpg'
+        logo: 'beEtudiant.png'
     },
 ]

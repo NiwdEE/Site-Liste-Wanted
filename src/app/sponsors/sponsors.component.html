@@ -25,10 +25,27 @@
 
 <div class="fullpageView" [@FadeIO]="showDesc != undefined">
     <div class="background" (click)="show(undefined, null)"></div>
+    
     <div class="descContainer">
-        <div class="desc" *ngIf="showDesc != undefined" [innerHtml]="sponsors[showDesc].desc">
 
+        <div class="infos" *ngIf="showDesc != undefined">
+            <div class="title">
+                {{sponsors[showDesc].name}}
+            </div>
+
+            <div class="desc" [innerHtml]="sponsors[showDesc].desc">
+
+            </div>
+
+            <div class="buttons">
+                <ng-container *ngIf="sponsors[showDesc].link">
+                    <a [href]="sponsors[showDesc].link" target="_blank">
+                        En profiter
+                    </a>
+                </ng-container>
+            </div>
         </div>
+
     </div>
 
 </div>

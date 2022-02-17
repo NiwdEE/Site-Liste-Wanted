@@ -54,7 +54,8 @@ export class NavComponent implements OnInit {
     .subscribe((v)=>{
       if(v instanceof NavigationStart){
         this.Navs.forEach((n, i) => {
-          if(v.url.split('/')[1] == n.path){
+          // console.log(v.url.split('/')[1], n.path + (n.goto ? '#' + n.goto : ''))
+          if(v.url.split('/')[1] == n.path + (n.goto ? '#' + n.goto : '')){
             this.currentNav = i;
           }
         })

@@ -73,7 +73,7 @@ export const Poles: pole[] = [
         {
           name: "Alicia B.",
           nickname: "Abadakor",
-          desc: "",
+          desc: "Elle a réponse à tout !",
           tag: "Trésorière"
         }
       ]
@@ -90,12 +90,12 @@ export const Poles: pole[] = [
         {
           name: "Dorian F.",
           nickname: "Cheer'If 345",
-          desc: "Un sombre passé..."
+          desc: "Un nombre reflétant un sombre passé..."
         },
         {
           name: "Duncan B.",
           nickname: "PileOuFace",
-          desc: "Qu'est-ce qu'il fait là ? Un pûr hasard !"
+          desc: "Qu'est-ce qu'il fait là ? Un pur hasard !"
         },
         {
           name: "Mattéo R.",
@@ -136,7 +136,7 @@ export const Poles: pole[] = [
         {
           name: "Margot R.",
           nickname: "Câlin",
-          desc: ""
+          desc: "Et lui on dit merci pour notre année !"
         }
       ]
     },
@@ -249,6 +249,25 @@ export const Poles: pole[] = [
           name: "Samy LB.",
           nickname: "Samy The Kid",
           desc: ""
+        },
+        {
+          name: "Rojojo",
+          nickname: "@Listeux",
+          // desc: "Imagine il a pas de péno. Nan j'rigole. Mais imagine quand même..."
+          desc: "Listeux moi ? Sérieusement ?! Demande à mon groupe d'amis, tu vas voir les réponses que tu vas te prendre XD"
+
+        },
+        {
+          name: "Roxanne LB.",
+          nickname: "Red Light",
+          desc: ""
+
+        },
+
+        {
+          name: "Dodovan",
+          nickname: "Le Vanted",
+          desc: "9 places de pur plaisir ! (plus si affinités)"
         }
       ]
     }
