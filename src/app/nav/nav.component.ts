@@ -1,6 +1,7 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
+import { ActivatedRoute, NavigationStart, Router } from '@angular/router';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 import { NavService } from './nav.service';
 
 @Component({
@@ -41,13 +42,32 @@ export class NavComponent implements OnInit {
 
   hoverNav: number[] = Array(this.Navs.length).fill(0);
 
+  currentNav: number|undefined = undefined;
 
-	constructor(public nav: NavService, private router: Router){
 
+	constructor(public nav: NavService, private router: Router, private route: ActivatedRoute){
+
+    let $done = new Subject<null>()
+
+    this.router.events
+    .pipe(takeUntil($done))
+    .subscribe((v)=>{
+      if(v instanceof NavigationStart){
+        this.Navs.forEach((n, i) => {
+          if(v.url.split('/')[1] == n.path){
+            this.currentNav = i;
+          }
+        })
+        
+        $done.next(null)
+      }
+    
+    })
   }
 
-  navigate(path: string, goto: string|undefined){
-    this.router.navigate([path], {fragment: goto})
+  navigate(path: string, goto: string|undefined, index?: number){
+    this.currentNav = index;
+    this.router.navigate([path], {fragment: goto});
   }
 
   hover(navID: number){
@@ -62,7 +82,8 @@ export class NavComponent implements OnInit {
   }
 
 	ngOnInit(): void {
-	
+    // console.log(this.router.url.split('/'))
+    
 	}
 
 }

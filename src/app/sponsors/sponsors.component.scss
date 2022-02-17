@@ -2,23 +2,34 @@
 $transition_time: 0.2s;
 
 .innerComp{
+    overflow: hidden;
 
     .innerContent{
-        width: 100%;
-        height: 100%;
+        height: calc(100% - 100px);
+        // margin-top: 100px;
+        width: calc(100% - 40px);
+
+        margin: 80px 20px 20px 20px;
+
+        border-radius: 6.9px;
 
         display: flex;
 
         flex-direction: column;
         justify-content: flex-start;
 
+        background-image: url('/assets/images/hpaper_lq.jpg');
+        background-size: 100% 100%;
+        background-position: 50% 50%;
     }
     
     .title{
+        position: relative;
         width: 100%;
-        margin: 100px 0 50px 0;
+        padding: 25px 0 25px 0;
 
         text-align: center;
+        color: black;
 
         font-size: 5em;
         font-family: 'Western Bang Bang';
@@ -26,40 +37,70 @@ $transition_time: 0.2s;
         flex-grow: 0;
     }
 
+    
+
 
     .sponsors{
+        position: relative;
 
-        height: 75%;
+        // height: 50%;
         width: 100%;
+
+        flex-grow: 1;
+        padding-bottom: 25px;
 
         display: flex;
         flex-direction: column;
 
-        justify-content: space-around;
-        align-items: center;
+        // justify-content: space-around;
+        // align-items: center;
 
         .row{
+            position: relative;
+
             width: 100%;
+            
+            flex-grow: 1;
+            // height: 33%;
+            // max-height: 33%;
+
 
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: space-around;
             align-items: center;
 
             .sponsor{
                 position: relative;
-                width: 130px;
-                height: auto;
+
+                flex-grow: 1;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                // padding: 10px 0;
+
+                // width: 100%;
+                height: calc(100% - 20px);
 
                 font-size: 2em;
 
+
                 .logo{
-                    width: 100%;
+                    // @include center();
+                    position: absolute;
+                    // max-width: 100%;
+                    // max-height: 100%;
+                    width: 80%;
+                    height: 80%;
+
+                    object-fit: contain;
                 }
 
-                span{
+                .name{
                     @include center();
-                    width: 100%;
+                    // width: 100%;
                 }
 
             }
@@ -96,15 +137,18 @@ $transition_time: 0.2s;
 
     .descContainer{
         
-        width: 600px;
+        height: 300px;
         
-        height: auto;
+        color: black;
 
-        aspect-ratio: 16/9;
+
+
+        aspect-ratio: 5/4;
 
         z-index: 101;
 
-        background-color: yellow;
+        // background-color: yellow;
+        background-image: url('/assets/images/ath_blank.png');
 
     }
 }

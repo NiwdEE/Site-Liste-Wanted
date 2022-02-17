@@ -56,7 +56,9 @@ export class SponsorsComponent implements OnInit {
 
   showDesc: number|undefined = undefined;
 
-  rowedSponsors: sponsor[][] = this.getRows(sponsors)
+  rowedSponsors: sponsor[][]|undefined; 
+
+  sponsors = sponsors
 
   constructor(){
 
@@ -64,6 +66,8 @@ export class SponsorsComponent implements OnInit {
     for(let s of sponsors){
       s.id = i++;
     }
+
+    this.rowedSponsors = this.getRows(sponsors)
 
   }
 
@@ -79,13 +83,13 @@ export class SponsorsComponent implements OnInit {
       sponsors.slice(2*rowSize + middleOS, sponsors.length),
     ]
   
-    console.log(ret)
+    // console.log(ret)
 
     return ret
   }
 
   show(wich: number|undefined, evt: any){
-    console.log(evt)
+    // console.log(evt)
     this.showDesc = wich;
   }
 

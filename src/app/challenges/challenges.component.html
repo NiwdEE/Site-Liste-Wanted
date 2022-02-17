@@ -1,0 +1,74 @@
+<div class="innerComp">
+    <div class="innerContent">
+        <div class="challenges made">
+            <div class="title">
+                Défis réalisés
+            </div>
+
+            <div class="hline"></div>
+
+            <div class="poster">
+                <div class="content">
+                    <table class="list">
+                        <thead>
+                            <tr>
+                                <!-- <th colspan="2">The table header</th> -->
+                                <td>Défi</td>
+                                <td>Proposé par</td>
+                                <td>Réalisé le</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let p of chals.tests; let i = index" (click)="show(i)">
+                                <td>{{p.desc}}</td>
+                                <td>{{p.by}}</td>
+                                <td class="date">{{p.madedate}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="challenges tomake">
+            <div class="title">
+                Défis à réaliser
+            </div>
+
+            <div class="hline"></div>
+
+            <div class="poster">
+                <div class="content">
+                    <table class="list">
+                        <thead>
+                            <tr>
+                                <!-- <th colspan="2">The table header</th> -->
+                                <td>Défi</td>
+                                <td>Proposé par</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let p of chals.tests">
+                                <td>{{p.desc}}</td>
+                                <td>{{p.by}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="fullpageView" [@FadeIO] *ngIf="showVideo">
+    <div class="background" (click)="show(null)"></div>
+
+    <div class="vidContainer">
+        <iframe #video width="100%" height="100%" [src]="safeUrl"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+</div>

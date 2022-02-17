@@ -154,12 +154,13 @@ export const Poles: pole[] = [
         {
           name: "Antoine M.",
           nickname: "Le truand",
-          desc: "Si j'étais vous j'éviterai de le contrarier !"
+          desc: "Ses profs et ses camarades ne l'ont jamais vu, ses bulletins sont vides, mais il continue de valider ses semestres...",
         },
         {
           name: "Eyal G.",
           nickname: "Dr Salé",
-          desc: "Si vous tenez à votre audition, évitez de le contrarier, ou de jouer à Pokémon avec lui"
+          // desc: "Si vous tenez à votre audition, évitez de le contrarier, ou de jouer à Pokémon avec lui"
+          desc: "Si j'étais vous j'éviterai de le contrarier !"
         },
         {
           name: "Flo H.",
@@ -179,7 +180,7 @@ export const Poles: pole[] = [
         {
           name: "Marie TP.",
           nickname: "Britney",
-          desc: "Et pourtant elle ne sais pas chanter...",
+          desc: "Et pourtant elle ne sait pas chanter...",
           tag: "Respo Event"
         },
         {
@@ -199,7 +200,7 @@ export const Poles: pole[] = [
         },
         {
           name: "Justine M.",
-          nickname: "La Murgence",
+          nickname: "Murgence",
           desc: ""
         },
         {
@@ -236,12 +237,13 @@ export const Poles: pole[] = [
       ]
     },
     {
-      name: "Pôle-Yvalent",
+      name: "Pôle-Asso",
       members: [
         {
           name: "Hugo R.",
           nickname: "Ghost Rider",
-          desc: "On suppose qu'il préfère sa moto aux réunions, mais on n'a jamais pu lui demander"
+          desc: "On suppose qu'il préfère sa moto aux réunions, mais on n'a jamais pu lui demander",
+          tag: "Respôle'asso"
         },
         {
           name: "Samy LB.",

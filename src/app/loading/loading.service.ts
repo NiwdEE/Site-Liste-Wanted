@@ -60,7 +60,7 @@ export class LoadingService {
 
     setTimeout(()=>{
       this.unblock()
-    }, 5000)
+    }, 500)
   }
 
   refreshLoader(loadingState: number){
