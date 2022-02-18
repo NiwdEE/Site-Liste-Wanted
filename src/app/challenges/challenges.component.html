@@ -106,15 +106,21 @@
             </div>
             
             <div class="ic">
+                <div class="">
+
+                </div>
                 <label for="defi">Par</label>
                 <input type="text" name="par" maxlength="30" ngModel>
             </div>
 
             <div class="submit ic">
+                <ngx-recaptcha2 #captchaElem
+                    [siteKey]="chals.siteKey"
+                    (success)="onCaptchaComplete($event)">
+                </ngx-recaptcha2>
                 <div class="send" (click)="onSubmit(myForm.value)">
                     Envoyer
                 </div>
-                <!-- <input type="submit" value="Envoyer"> -->
             </div>
 
         </form>

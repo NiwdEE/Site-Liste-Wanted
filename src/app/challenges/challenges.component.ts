@@ -3,6 +3,7 @@ import { NavService } from '../nav/nav.service';
 import { ChallengesService } from './challenges.service';
 import { trigger, style, animate, transition, animateChild, query, group, state } from '@angular/animations';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'app-challenges',
@@ -55,6 +56,8 @@ export class ChallengesComponent implements OnInit {
   _showVideo: boolean = false;
   _showForm: boolean = false;
 
+  token: string|null = null;
+
   @HostListener('document:keydown.esc')
   onEscape(){
     this._showVideo = false
@@ -97,9 +100,17 @@ export class ChallengesComponent implements OnInit {
 
   onSubmit(values: any){
 
-    if(values.par.length > 30 || values.par.length == 0 || values.defi.length > 100 || values.defi.length <10 ) return;
+    if(values.par.length > 30 || values.par.length == 0 || values.defi.length > 100 || values.defi.length <10 || !this.token) return;
 
-    this.chals.subChall(values.defi, values.par)
+    this.chals.subChall(values.defi, values.par, this.token)
+    .subscribe((val)=>{
+      this.showForm(false)
+      this.chals.getChalls()
+    })
+  }
+
+  onCaptchaComplete($evt: any){
+    this.token = $evt
   }
 
   ngOnInit(): void {
