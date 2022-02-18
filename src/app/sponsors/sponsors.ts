@@ -30,29 +30,32 @@ export const sponsors: sponsor[] = [
     },
     {
         name: "Bureau des goodies",
-        desc: "Un super bon plan pour commander vous goodies en grandes quantités et à bon prix !",
+        desc: "Un super bon plan pour commander vos goodies en grandes quantités et à bon prix !",
         logo: 'BDG.png',
         link: "https://www.bureau-des-goodies.fr/"
     },
     {
-        name: "Popout",
+        name: "Pop out",
         desc: "Une super application de bons plans sur Paris et ses alentours.",
         logo: 'pop_out.png'
     },
     {
         name: "Poppy’s",
         desc: "Une excellente crèperie qui vous proposera un délicieux menu Wanted.",
-        logo: 'Poppy_s.png'
+        logo: 'Poppy_s.png',
+        link: "https://www.poppy-s.fr"
     },
     {
         name: "Koezio",
-        desc: 'un crack internationnal de classe c6',
-        logo: 'Koezio.png'
+        desc: "Des réductions sur un tas d'activitées telles que des escape games ou de la réalité virtuelle",
+        logo: 'Koezio.png',
+        link: 'https://koezio.co'
     },
     {
         name: "Permilike",
         desc: "Une super auto-école située dans Cergy qui vous propose une scéance d'évaluation gratuite (d'une valeur de 44€).",
-        logo: 'PermiLike.png'
+        logo: 'PermiLike.png',
+        link: "https://www.permilike.com"
     },
     {
         name: "Au pain du village",
@@ -62,7 +65,7 @@ export const sponsors: sponsor[] = [
     },
     {
         name: "BeEtudiant",
-        desc: 'un crack internationnal de classe c9',
+        desc: 'Une super application de bons plans sur Cergy et ses alentours.',
         logo: 'beEtudiant.png'
     },
 ]

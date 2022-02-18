@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ContentChild, ElementRef, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { NavService } from '../nav/nav.service';
 
 @Component({
   selector: 'app-voyages',
@@ -11,51 +12,33 @@ export class VoyagesComponent implements OnInit {
 
   index = 0;
 
-  LIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim<br/>sit amet, adipiscing..."
-
   Travels = [
     {
       // name: "Week-end d'intégration",
       name: "WEI",
       img: 'wei',
-      desc: "blablabla, alcool, bizus, beaucoup de fun",
+      desc: "Activités, alcool, fun et bonne ambiance. Bref, un WEI d'anthologie vous attend.",
       color: "#a81fed"
     },
     {
-      name: 'Voyage au Ski',
+      name: 'Ski',
       img: 'ski',
-      desc: this.LIpsum,
+      desc: "Viens tester ta descente dans les Alpes, entre la France et la Suisse.",
       color: "#84dee8"
     },
     {
-      name: "Voyage à l'étranger",
+      name: "Étranger",
       img: 'etr',
-      desc: "cyka bylet",
+      desc: "Optez pour un voyage en Europe de l'est avec des paysages (et prix d'alcool) à couper le souffle !",
       color: "#ebaa1e"
     }
   ]
 
-  avatars = '123'.split('').map((x, i) => {
-    const num = i;
-    // const num = Math.floor(Math.random() * 1000);
-    return {
-      url: `https://picsum.photos/600/400/?${num}`,
-      title: `${num}`
-    };
-  });
 
-  constructor() {}
-
-  push() {
-    this.avatars.push({
-      url: `https://picsum.photos/600/400/?${this.avatars.length + 1}`,
-      title: `${this.avatars.length + 1}`
-    });
+  constructor(public nav: NavService){
+    
   }
 
-  remove() {
-    this.avatars.splice(this.avatars.length - 1, 1);
-  }
 
   indexChanged(index: any) {
     console.log(index);

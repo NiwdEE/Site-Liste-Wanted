@@ -18,13 +18,15 @@ import { VoyagesComponent } from './voyages/voyages.component';
 import 'hammerjs';
 import { NgxHmCarouselModule } from 'ngx-hm-carousel';
 import { ClipboardModule } from 'ngx-clipboard';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoadingComponent } from './loading/loading.component';
 import { ImgLoadingDirective } from './loading/img-loading.directive';
 import { TrailerComponent } from './trailer/trailer.component';
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { ChallengesComponent } from './challenges/challenges.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { NgxCaptchaModule } from 'ngx-captcha';
 
 
 @NgModule({
@@ -52,7 +54,10 @@ import { ChallengesComponent } from './challenges/challenges.component';
     BrowserAnimationsModule,
     NgxHmCarouselModule,
     ClipboardModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    NgxCaptchaModule
   ],
   providers: [
 

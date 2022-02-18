@@ -14,7 +14,11 @@ export class NavService {
 
   showBar: boolean = window.innerWidth > 1000;
 
+  showMenu: boolean = false;
+
   ea: number = 0;
+
+  winSize: number = window.innerWidth;
 
   eai(){
     this.ea++;
@@ -39,4 +43,8 @@ export class NavService {
     this.$parentScroll.next(event.target.scrollTop);
   }
 
+
+  toggleMenu(){
+    this.showMenu = !(this.showMenu)
+  }
 }

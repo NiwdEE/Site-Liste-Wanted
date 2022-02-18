@@ -41,6 +41,8 @@
         border-radius: 15px;
         overflow: hidden;
 
+        -moz-backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
  
     }

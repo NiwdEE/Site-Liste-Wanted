@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
+import { take } from 'rxjs';
+// import { HttpClient } from '@angular/core/' 
 
 export type challenge = {
   by: string,
@@ -10,6 +12,15 @@ export type challenge = {
   madedate: string
 }
 
+export type chall = {
+  author: string,
+  task: string,
+  postdate: string,
+
+  made: boolean,
+  link?: string,
+  madedate?: string
+}
 
 export type proposition = {
   by: string,
@@ -31,10 +42,48 @@ export class ChallengesService {
     madedate: "17/02/2022"
   }
 
-  tests: challenge[] = Array(20).fill(this.testChallenge)
+  tests: challenge[] = Array(20).fill(this.testChallenge);
 
-  constructor(){
-    
+  finished: challenge[] = [];
+  posted: proposition[] = []
+  // tests: challenge[] = []
+
+  constructor(private http: HttpClient){
+    this.getChalls()
   }
+
+
+  getChalls(){
+    this.http.get('https://liste-wanted.fr/api-abeille-ruche-miel-o-crack/defis/retrieve')
+    .pipe(take(1))
+    .subscribe({
+      next: (res: any) => {
+        this.finished = res.finished;
+        this.posted = res.posted;
+      },
+      error: (err) => {
+        console.log('Une erreur est survenue: ', err)
+      }
+    })
+  }
+
+
+  subChall(task: string, author: string){
+    this.http.post('https://liste-wanted.fr/api-abeille-ruche-miel-o-crack/defis/add', {
+      task: task,
+      author: author,
+      token: 'null'
+    })
+    .pipe(take(1))
+    .subscribe({
+      next: (res: any) => {
+        console.log(res)
+      },
+      error: (err) => {
+        console.log('Une erreur est survenue: ', err)
+      }
+    })
+  }
+
 
 }

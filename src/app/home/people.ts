@@ -95,7 +95,7 @@ export const Poles: pole[] = [
         {
           name: "Duncan B.",
           nickname: "PileOuFace",
-          desc: "Qu'est-ce qu'il fait là ? Un pur hasard !"
+          desc: "Qu'est-ce qu'il fait <br/>là ? Un pur hasard !"
         },
         {
           name: "Mattéo R.",
@@ -136,7 +136,12 @@ export const Poles: pole[] = [
         {
           name: "Margot R.",
           nickname: "Câlin",
-          desc: "Et lui on dit merci pour notre année !"
+          desc: "Et on lui dit merci pour notre année !"
+        },
+        {
+          name: "Dodovan",
+          nickname: "Vanted",
+          desc: "9 places de pur plaisir ! (plus si affinités)"
         }
       ]
     },
@@ -160,11 +165,11 @@ export const Poles: pole[] = [
           name: "Eyal G.",
           nickname: "Dr Salé",
           // desc: "Si vous tenez à votre audition, évitez de le contrarier, ou de jouer à Pokémon avec lui"
-          desc: "Si j'étais vous j'éviterai de le contrarier !"
+          desc: "Si j'étais vous j'éviterais de le contrarier !"
         },
         {
           name: "Flo H.",
-          nickname: "poti blagueur",
+          nickname: "Potit Blagueur",
           desc: "La réponse à tous les blancs !"
         },
         {
@@ -186,7 +191,7 @@ export const Poles: pole[] = [
         {
           name: "Marion P.",
           nickname: "A Kroquer",
-          desc: "Avant d'acheter 520 kro, il aurait fallut penser au stockage..."
+          desc: "Avant d'acheter 520 kro, il aurait fallu penser au stockage..."
         },
         {
           name: "Brayan K.",
@@ -201,7 +206,7 @@ export const Poles: pole[] = [
         {
           name: "Justine M.",
           nickname: "Murgence",
-          desc: "Une pls ? elle est là !"
+          desc: "Une pls ?<br/>elle est là !"
         },
         {
           name: "Ludivine B.",
@@ -264,11 +269,7 @@ export const Poles: pole[] = [
 
         },
 
-        {
-          name: "Dodovan",
-          nickname: "Le Vanted",
-          desc: "9 places de pur plaisir ! (plus si affinités)"
-        }
+        
       ]
     }
   ]

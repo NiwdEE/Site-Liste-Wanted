@@ -31,8 +31,6 @@ export class MemberCardComponent implements OnInit {
 
   who: member|undefined;
 
-  
-
   constructor(public people: PeopleService, public nav: NavService){
     
   }

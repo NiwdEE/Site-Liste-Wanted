@@ -33,6 +33,8 @@ export class AppComponent implements AfterViewInit, OnInit {
   onResize($event: any) {
     this.nav.showBar = $event.target.innerWidth > 1000;
     this.nav.extend = false;
+
+    this.nav.winSize = $event.target.innerWidth;
   }
 
   constructor(public nav: NavService, public scroll: ScrollService, private activatedRoute: ActivatedRoute, private router: Router){
@@ -53,5 +55,5 @@ export class AppComponent implements AfterViewInit, OnInit {
 
   ngOnInit(): void {
     
- }
+  }
 }

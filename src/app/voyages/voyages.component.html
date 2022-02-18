@@ -13,7 +13,7 @@
                 [autoplay-speed]="2000"
                 [autoplay]="true"
                 [autoplay-direction]="'right'"
-                [show-num]="1.5"
+                [show-num]="nav.winSize > 1000 ? 1.5 : .8"
                 [infinite]="true"
                 [between-delay]="2000"
                 [data]="Travels"
@@ -39,7 +39,7 @@
                 <section class="content">
                     <article class="item" [class.active]="index===i">
                         <div class="travelBrief" [style.background-image]="'url(/assets/images/voyages/' + Travel.img + '.jpg'">
-                            <div class="travelInfos" [style.background-color]="Travel.color+'B0'">
+                            <div class="travelInfos" [style.background-color]="Travel.color+'50'">
                                 <div class="travelName">
                                     {{Travel.name}}
                                 </div>

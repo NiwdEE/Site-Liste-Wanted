@@ -23,7 +23,7 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
         style({ opacity: 0, display: 'flex'}),
 
-        query('.vidContainer', 
+        query('.container', 
           style({
             transform: 'scale(0)'
           })
@@ -31,7 +31,7 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
         animate('.2s ease-in-out', style({opacity: 1})),
         
-        query('.vidContainer',
+        query('.container',
           animate('.42s ease-in-out',
             style({
               transform: 'scale(1)'
@@ -52,11 +52,12 @@ export class ChallengesComponent implements OnInit {
 
   @ViewChild('video') video: ElementRef<HTMLIFrameElement>|undefined = undefined;
 
-  showVideo: boolean = false;
+  _showVideo: boolean = false;
+  _showForm: boolean = false;
 
   @HostListener('document:keydown.esc')
   onEscape(){
-    this.showVideo = false
+    this._showVideo = false
   }
 
   videoCode: string|null = null;
@@ -72,21 +73,33 @@ export class ChallengesComponent implements OnInit {
     this.video.nativeElement.contentWindow?.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
   } 
 
-  show(which: number|null){
+  showVideo(which: string|null){
     let show = which !== null
-    this.showVideo = show
+    this._showVideo = show
     this.nav.$blockExtension.next(show);
     
     if(which !== null){
-      this.videoCode = this.chals.tests[which].link
-      this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+ this.videoCode +'?enablejsapi=1&version=3&playerapiid=ytplayer');
+      // this.videoCode = this.chals.tests[which].link
+      this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+ which +'?enablejsapi=1&version=3&playerapiid=ytplayer');
     }
 
     // if(which) this.pauseVideo();
   }
 
+  showForm(yn: boolean){
+    this._showForm = yn;
+    this.nav.$blockExtension.next(yn);
+  }
+
   constructor(public chals: ChallengesService, private nav: NavService, private sanitizer: DomSanitizer){
 
+  }
+
+  onSubmit(values: any){
+
+    if(values.par.length > 30 || values.par.length == 0 || values.defi.length > 100 || values.defi.length <10 ) return;
+
+    this.chals.subChall(values.defi, values.par)
   }
 
   ngOnInit(): void {

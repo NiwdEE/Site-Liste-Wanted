@@ -1,6 +1,6 @@
 <div id="fullpage" #scrollable (scroll)="nav.onScroll($event)">
 
-  <div appNav class="Navigation" [class]="nav.showBar?'bar':'menu'">
+  <div appNav class="Navigation" [class]="{'show': nav.showMenu && !nav.showBar, 'bar': nav.showBar, 'menu': !nav.showBar}">
   
   </div>
 

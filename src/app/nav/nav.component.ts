@@ -44,6 +44,7 @@ export class NavComponent implements OnInit {
 
   currentNav: number|undefined = undefined;
 
+  showMenu: boolean = false;
 
 	constructor(public nav: NavService, private router: Router, private route: ActivatedRoute){
 

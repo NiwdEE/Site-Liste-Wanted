@@ -37,7 +37,10 @@
     &.menu{
         width: auto;
         height: 100%;
-        pointer-events: none;
+        
+        &:not(.show){
+            pointer-events: none;    
+        }
     }
     
 }
