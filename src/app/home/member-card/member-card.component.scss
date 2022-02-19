@@ -67,6 +67,7 @@
 }
 
 .front{
+    transform: rotateY(0);
 
     @include lightFade();
 
