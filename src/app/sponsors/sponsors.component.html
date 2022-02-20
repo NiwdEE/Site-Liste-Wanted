@@ -12,7 +12,7 @@
         <div class="sponsors">
             <div class="row" *ngFor="let row of rowedSponsors">
                 <div class="sponsor" *ngFor="let sponsor of row" (click)="show(sponsor.id, $event)">
-                    <img [src]="'/assets/images/sponsors/'+sponsor.logo" class="logo" />
+                    <img [src]="'/assets/images/logos/'+sponsor.logo" class="logo" [alt]="'Logo ' + sponsor.name" />
                     <!-- <div class="name">{{sponsor.name}}</div> -->
                 </div>
             </div>
