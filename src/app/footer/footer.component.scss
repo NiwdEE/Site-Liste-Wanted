@@ -10,7 +10,7 @@
 
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 
     margin-top: 50px;
@@ -20,6 +20,14 @@
         text-decoration: none;
         color: inherit;
         cursor: pointer;
+
+        height: 25%;
+
+        svg{
+            fill: var(--p-1);
+            height: 100%;
+            // object-fit: contain; 
+        }
     }
 
     &::before{
@@ -35,18 +43,26 @@
 
     & > div{
         height: 100%;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
     }
 
+
     .logo{
-        aspect-ratio: 1;
+        // aspect-ratio: 1;
         position: relative;
         // z-index: 1000;
 
         &>img{
             @include center(); 
             height: 70%;
+            width: 90%;
+            object-fit: contain;
+            
         }
     }
+
 
     .social, .contact{
         display: flex;
