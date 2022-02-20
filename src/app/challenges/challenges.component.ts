@@ -76,14 +76,16 @@ export class ChallengesComponent implements OnInit {
     this.video.nativeElement.contentWindow?.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
   } 
 
-  showVideo(which: string|null){
+  showVideo(which: number|null){
     let show = which !== null
     this._showVideo = show
     this.nav.$blockExtension.next(show);
     
     if(which !== null){
       // this.videoCode = this.chals.tests[which].link
-      this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+ which +'?enablejsapi=1&version=3&playerapiid=ytplayer');
+      // this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+ which +'?enablejsapi=1&version=3&playerapiid=ytplayer');
+      this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.facebook.com/plugins/video.php?href='+ this.chals.finished[which].link + '&show_text=false&t=0');
+
     }
 
     // if(which) this.pauseVideo();

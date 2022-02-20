@@ -59,7 +59,7 @@ export const sponsors: sponsor[] = [
     },
     {
         name: "Au pain du village",
-        desc: 'Une boulangerie près du port, qui vous offrerons des réductions sur leurs produits.',
+        desc: 'Une boulangerie près du port, qui vous offrira des réductions sur leurs produits.',
         logo: 'pdv.png',
         link: "https://au-pain-du-village.business.site/"
     },
