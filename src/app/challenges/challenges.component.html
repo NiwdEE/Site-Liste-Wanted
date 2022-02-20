@@ -82,10 +82,17 @@
     <div class="background" (click)="showVideo(null)"></div>
 
     <div class="video container">
-        <iframe #video width="100%" height="100%" [src]="safeUrl"
+        <!-- <iframe #video width="100%" height="100%" [src]="safeUrl"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
+        </iframe> -->
+
+        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FListeBDEWanted%2Fvideos%2F495455708605088%2F&show_text=false&t=0"
+            width="100%" height="100%" style="border:none;overflow:hidden" scrolling="no" 
+            frameborder="0" allowfullscreen="true" 
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            allowFullScreen="true">
         </iframe>
     </div>
 </div>

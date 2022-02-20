@@ -34,17 +34,6 @@ export type proposition = {
 })
 export class ChallengesService {
 
-  testChallenge: challenge = {
-    by: "admin au beure salé    ",
-    desc: "finir le site avant les reveals, et wola que ca va pas etre facile, j'aime les crepes <script>alert(1)</script>",
-    postdate: "10/02/2022",
-
-    link: "dQw4w9WgXcQ",
-    madedate: "17/02/2022"
-  }
-
-  tests: challenge[] = Array(20).fill(this.testChallenge);
-
   siteKey = "6Lf9OIgeAAAAAAJHRIIxSVC9g-XeU_sgoq3j4rHk"
 
   finished: challenge[] = [];
@@ -57,7 +46,7 @@ export class ChallengesService {
 
 
   getChalls(){
-    this.http.get('https://liste-wanted.fr/api-abeille-ruche-miel-o-crack/defis/retrieve')
+    this.http.get('https://liste-wanted.fr/api-abeille-ruche-miel-o-crack/defis/getsite')
     .pipe(take(1))
     .subscribe({
       next: (res: any) => {

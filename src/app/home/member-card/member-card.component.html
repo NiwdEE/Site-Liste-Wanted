@@ -4,19 +4,19 @@
 
             <div class="image">
                 <img [src]="'/assets/images/'+ (nav.ea>5?'random':'') +'members/'+ people.uid(who.id) +'.jpg'"
-                    onerror="this.onerror=null; this.src='/assets/images/members/default.jpg'"/>
+                    onerror="this.onerror=null; this.src='/assets/images/members/default.jpg'" [alt]="who.name"/>
             </div>
 
-            <img class="fade" src="/assets/images/ath_blank.png">
+            <img class="fade" src="/assets/images/ath_blank.png" alt="Papier blanc">
 
             <div class="ath">
 
                 <div class="old_image">
                     <img class="member" [src]="'/assets/images/members/old/'+ people.uid(who.id) +'.jpg'"
-                    onerror="this.onerror=null; this.src='/assets/images/members/default.jpg'"/>
+                    onerror="this.onerror=null; this.src='/assets/images/members/default.jpg'" [alt]="who.name"/>
                 </div>
 
-                <img class="poster" src="/assets/images/ath_wanted.png"/>
+                <img class="poster" src="/assets/images/ath_wanted.png" alt="Affiche Wanted"/>
 
                 <div class="infos">
                     <span class="name">{{who.name}}</span>
