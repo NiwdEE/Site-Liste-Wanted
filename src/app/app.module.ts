@@ -27,6 +27,7 @@ import { ChallengesComponent } from './challenges/challenges.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { NgxCaptchaModule } from 'ngx-captcha';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { NgxCaptchaModule } from 'ngx-captcha';
       ImgLoadingDirective,
       TrailerComponent,
       SponsorsComponent,
-      ChallengesComponent
+      ChallengesComponent,
+      AdminComponent
   ],
   imports: [
     BrowserModule,

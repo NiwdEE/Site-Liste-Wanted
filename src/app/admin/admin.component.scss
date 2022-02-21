@@ -1,0 +1,25 @@
+@import 'mixins';
+
+
+.challenges.all{
+
+    width: 90%;
+    max-width: 100% !important;
+
+    
+    tbody tr:hover{
+        background-color: #5e381380 !important;
+    }
+
+    .poster::before{
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 100%;
+
+        background-image: url('/assets/images/ath_blank.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+}

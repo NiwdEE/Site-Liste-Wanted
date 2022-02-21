@@ -1,6 +1,7 @@
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from './admin/admin.component';
 import { ChallengesComponent } from './challenges/challenges.component';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { HomeComponent } from './home/home.component';
@@ -34,6 +35,10 @@ const routes: Routes = [
     path: 'sponsors',
     component: SponsorsComponent,
     data: {index: 5}
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
   },
   {
     path: 'palette',

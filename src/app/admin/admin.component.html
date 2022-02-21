@@ -1,0 +1,61 @@
+<div class="innerComp">
+    <div class="innerContent">
+        <div class="challenges all">
+
+            <div class="poster">
+                <div class="content">
+                    <table class="list">
+                        <thead>
+                            <tr>
+                                <!-- <th colspan="2">The table header</th> -->
+                                <td>Défi</td>
+                                <td>Proposé par</td>
+                                <td>Réalisé le</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let p of chals.all; let i = index">
+                                <td>{{p.desc}}</td>
+                                <td>{{p.by}}</td>
+                                <td class="date">{{p.madedate}}</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+</div>
+
+<div class="fullpageView" *ngIf="_showForm">
+    <div class="background" (click)="showForm(false)"></div>
+
+    <div class="form container">
+        <div class="title">
+            Proposer un Défi
+        </div>
+        <form #myForm="ngForm">
+
+            <div class="ic">
+                <label for="defi">Mon défi</label>
+                <input type="text" name="defi" maxlength="100" ngModel>
+            </div>
+            
+            <div class="ic">
+                <div class="">
+
+                </div>
+                <label for="defi">Par</label>
+                <input type="text" name="par" maxlength="30" ngModel>
+            </div>
+
+            <div class="submit ic">
+                <div class="send" (click)="onSubmit(myForm.value)">
+                    Envoyer
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
