@@ -1,0 +1,51 @@
+@import 'mixins';
+
+#fullpage{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    background-image: url(/assets/images/bg.jpg);
+
+
+    height: 100%;
+    width: 100%;
+
+    // overflow-y: scroll;
+    // overflow-x: hidden;
+}
+
+
+.content{
+    height: 100%;
+    width: 100%;
+    // position: absolute;
+
+    // overflow-y: auto;
+}
+
+.Navigation{
+    position: fixed;
+    top: 0;
+
+    z-index: 69;
+
+    &.bar{
+        width: calc(100% - 10px);
+    }
+
+    &.menu{
+        width: auto;
+        height: 100%;
+        
+        &:not(.show){
+            pointer-events: none;    
+        }
+    }
+    
+}
+
+router-outlet{
+    height: 100%;
+    width: 100%;
+}

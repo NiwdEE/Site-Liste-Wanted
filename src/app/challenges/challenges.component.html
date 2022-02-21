@@ -1,0 +1,135 @@
+<div class="innerComp">
+    <div class="innerContent">
+        <div class="challenges made">
+            <div class="title">
+                Défis réalisés
+            </div>
+
+            <div class="hline"></div>
+
+            <div class="poster">
+                <div class="content">
+                    <table class="list">
+                        <thead>
+                            <tr>
+                                <!-- <th colspan="2">The table header</th> -->
+                                <td>Défi</td>
+                                <td>Proposé par</td>
+                                <td>Réalisé le</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let p of chals.finished; let i = index" (click)="showVideo(i)">
+                                <td>{{p.desc}}</td>
+                                <td>{{p.by}}</td>
+                                <td class="date">{{p.madedate}}</td>
+                            </tr>
+
+                            <th colspan="3" *ngIf="chals.finished.length == 0">
+                                Y'en a pas encore ;)
+                            </th>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="challenges tomake">
+            <div class="title">
+                Défis à réaliser
+            </div>
+
+            <div class="hline"></div>
+
+            <div class="poster">
+                <div class="content">
+                    <table class="list">
+                        <thead>
+                            <tr>
+                                <!-- <th colspan="2">The table header</th> -->
+                                <td>Défi</td>
+                                <td>Proposé par</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <th colspan="2">
+                                <div class="post" (click)="showForm(true)">
+                                    + Proposer mon défi
+                                </div>
+                            </th>
+                            
+                            <tr *ngFor="let p of chals.posted">
+                                <td>{{p.desc}}</td>
+                                <td>{{p.by}}</td>
+                            </tr>
+                            <!-- <th >
+                                Y'en a pas encore ;)
+                            </th> -->
+
+                            
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="fullpageView" [@FadeIO] *ngIf="_showVideo">
+    <div class="background" (click)="showVideo(null)"></div>
+
+    <div class="video container">
+        <!-- <iframe #video width="100%" height="100%" [src]="safeUrl"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe> -->
+
+        <iframe [src]="safeUrl"
+            width="100%" height="100%" style="border:none;overflow:hidden" scrolling="no" 
+            frameborder="0" allowfullscreen="true" 
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            allowFullScreen="true">
+        </iframe>
+    </div>
+</div>
+
+
+<div class="fullpageView" [@FadeIO] *ngIf="_showForm">
+    <div class="background" (click)="showForm(false)"></div>
+
+    <div class="form container">
+        <div class="title">
+            Proposer un Défi
+        </div>
+        <form #myForm="ngForm">
+
+            <div class="ic">
+                <label for="defi">Mon défi</label>
+                <input type="text" name="defi" maxlength="100" ngModel>
+            </div>
+            
+            <div class="ic">
+                <div class="">
+
+                </div>
+                <label for="defi">Par</label>
+                <input type="text" name="par" maxlength="30" ngModel>
+            </div>
+
+            <div class="submit ic">
+                <ngx-recaptcha2 #captchaElem
+                    [siteKey]="chals.siteKey"
+                    (success)="onCaptchaComplete($event)">
+                </ngx-recaptcha2>
+                <div class="send" (click)="onSubmit(myForm.value)">
+                    Envoyer
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

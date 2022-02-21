@@ -1,1 +1,217 @@
-/* You can add global styles to this file, and also import other style files */
+
+html{
+    //Palettes
+
+    //Jaune
+    --p-j-1: #969086;
+    --p-j-2: #5f5a51;
+    --p-j-3: #75674d;
+    --p-j-4: #5d4f33;
+    --p-j-5: #573f11;
+    --p-j-6: #725723;
+    --p-j-7: #9e7a35;
+    --p-j-8: #c89a3f;
+    --p-j-9: #a29171;
+
+    //Orange
+    --p-o-1: #443a31;
+    --p-o-2: #382c20;
+    --p-o-3: #31200f;
+    --p-o-4: #4c3218;
+    --p-o-5: #5e3813;
+    --p-o-6: #744a21;
+    --p-o-7: #8e6338;
+    --p-o-8: #a36f3c;
+    --p-o-9: #b88340;
+
+    //Rouge
+    --p-r-1: #251e1d;
+    --p-r-2: #211714;
+    --p-r-3: #311c16;
+    --p-r-4: #271008;
+    --p-r-5: #3c1407;
+    --p-r-6: #533126;
+    --p-r-7: #5d2f20;
+    --p-r-8: #7f381f;
+    --p-r-9: #a04626;
+
+    //Violet
+    --p-v-1: #392e30;
+    --p-v-2: #231316;
+    --p-v-3: #1e0a0f;
+    --p-v-4: #330510;
+    --p-v-5: #450d1a;
+    --p-v-6: #4a323c;
+    --p-v-7: #57343c;
+    --p-v-8: #6f424d;
+    --p-v-9: #883d4f;
+
+    //Vert
+    --p-g-1: #313d00;
+    --p-g-2: #324a06;
+    --p-g-3: #4d604c;
+    --p-g-4: #48bf2a;
+
+
+
+
+    --primary-theme: #140906;
+    --secondary-theme: #361810;
+
+    --p-1: #ffe4d4;
+
+    height: 100%;
+}
+
+.innerComp{
+    position: relative;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    height: 100%;
+    width: 100%;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+      
+    &::-webkit-scrollbar-thumb {
+        background: var(--p-r-8);
+        border-radius: 10px;
+        // &:hover{
+        //     background-color: 
+        // }
+    };
+      
+    &::-webkit-scrollbar-track {
+        background: #84cf8c;
+        border: 4px solid transparent;
+        background-clip: padding-box;
+    };
+}
+
+
+body{
+    background: var(--primary-theme);
+    background: radial-gradient(var(--p-r-5) 23%, var(--p-r-4) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+
+    color: var(--p-1);
+
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+
+    display: flex;
+}
+
+#app-root{
+    height: 100%;
+    width: 100%;
+}
+
+/*
+Chiffres:     O
+Accents:      X
+E dans l'O:   X
+Diff Min/maj: X
+*/
+@font-face {
+    font-family: 'Buffalo Grunge';
+    src: url(/assets/fonts/BuffaloInline2Grunge.otf);
+}
+
+/*
+Chiffres:     O
+Accents:      O
+E dans l'O:   O
+Diff Min/maj: ~
+*/
+@font-face {
+    font-family: 'Docktrin';
+    src: url(/assets/fonts/docktrin.ttf);
+}
+
+/*
+Chiffres:     O
+Accents:      X
+E dans l'O:   X
+Diff Min/maj: X
+*/
+@font-face {
+    font-family: 'Nandaka';
+    src: url(/assets/fonts/nandaka_western.ttf);
+}
+
+/*
+Chiffres:     O
+Accents:      O
+E dans l'O:   O
+Diff Min/maj: O
+*/
+@font-face {
+    font-family: 'Saddle bag';
+    src: url(/assets/fonts/Saddlebag.ttf);
+}
+
+/*
+Chiffres:     O
+Accents:      X
+E dans l'O:   X
+Diff Min/maj: O
+*/
+@font-face {
+    font-family: 'Showguide';
+    src: url(/assets/fonts/showguide.ttf);
+}
+
+/*
+Chiffres:     X
+Accents:      O
+E dans l'O:   O
+Diff Min/maj: X
+*/
+@font-face {
+    font-family: 'Texas Tango';
+    src: url(/assets/fonts/Texas_Tango.otf);
+}
+
+/*
+Chiffres:     X
+Accents:      O
+E dans l'O:   X
+Diff Min/maj: O
+*/
+@font-face {
+    font-family: 'Western Bang Bang';
+    src: url(/assets/fonts/western_bang_bang.otf);
+}
+
+
+@keyframes bounce{
+    from{
+        transform: scale(1);
+    }
+
+    to{
+        transform: scale(.5);
+    }
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+.preload{
+    display: none;
+}

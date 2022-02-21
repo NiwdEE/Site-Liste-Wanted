@@ -1,0 +1,51 @@
+
+<div class="innerComp">
+
+    <div class="innerContent">
+
+        <!-- <img class="bg" src='/assets/images/sponsors/bg.png'> -->
+        
+        <div class="title">
+            Nos Sponsors
+        </div>
+
+        <div class="sponsors">
+            <div class="row" *ngFor="let row of rowedSponsors">
+                <div class="sponsor" *ngFor="let sponsor of row" (click)="show(sponsor.id, $event)">
+                    <img [src]="'/assets/images/logos/'+sponsor.logo" class="logo" [alt]="'Logo ' + sponsor.name" />
+                    <!-- <div class="name">{{sponsor.name}}</div> -->
+                </div>
+            </div>
+        </div>
+
+       
+    </div>
+    
+</div>
+
+<div class="fullpageView" [@FadeIO]="showDesc != undefined">
+    <div class="background" (click)="show(undefined, null)"></div>
+    
+    <div class="descContainer">
+
+        <div class="infos" *ngIf="showDesc != undefined">
+            <div class="title">
+                {{sponsors[showDesc].name}}
+            </div>
+
+            <div class="desc" [innerHtml]="sponsors[showDesc].desc">
+
+            </div>
+
+            <div class="buttons">
+                <ng-container *ngIf="sponsors[showDesc].link">
+                    <a [href]="sponsors[showDesc].link" target="_blank">
+                        En profiter
+                    </a>
+                </ng-container>
+            </div>
+        </div>
+
+    </div>
+
+</div>

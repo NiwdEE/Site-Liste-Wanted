@@ -1,0 +1,38 @@
+<div class="bar noselect" [class]="{'extend': nav.extend && !(nav.$blockExtension|async)}" *ngIf="nav.showBar; else navMenu">
+
+    <div class="logo">
+        <img src="/assets/images/logo.png" alt="Logo Wanted">
+    </div>
+
+    <nav>
+        <a *ngFor="let n of Navs; let i = index" [class]="{'hover': hoverNav[i]>0 || currentNav === i}"
+        (click)="navigate(n.path, n.goto, i)" (mouseenter)="hover(i)" (mouseleave)="unhover(i)">
+            <span>
+                {{n.name}}
+            </span>
+        </a>
+    </nav>
+
+    <div class="logo" (click)="nav.eai()">  
+        <img src="/assets/images/logo.png" alt="Logo Wanted">
+    </div>
+
+</div>
+
+<ng-template #navMenu>
+    <div class="menu" [class]="{'show': nav.showMenu}">
+        <div class="showMenu" (click)="nav.toggleMenu()">
+            <svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="white"><path d="M19 17h-14c-1.103 0-2 .897-2 2s.897 2 2 2h14c1.103 0 2-.897 2-2s-.897-2-2-2zM19 10h-14c-1.103 0-2 .897-2 2s.897 2 2 2h14c1.103 0 2-.897 2-2s-.897-2-2-2zM19 3h-14c-1.103 0-2 .897-2 2s.897 2 2 2h14c1.103 0 2-.897 2-2s-.897-2-2-2z"></path></svg>
+        </div>
+
+        <nav>
+            <a *ngFor="let n of Navs; let i = index" [class]="{'hover': hoverNav[i]>0 || currentNav === i}"
+            (click)="navigate(n.path, n.goto, i)" (mouseenter)="hover(i)" (mouseleave)="unhover(i)">
+                <span>
+                    {{n.name}}
+                </span>
+            </a>
+        </nav>
+    </div>
+</ng-template>
+

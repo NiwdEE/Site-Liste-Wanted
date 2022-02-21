@@ -1,0 +1,75 @@
+@import 'mixins';
+
+.innerComp{
+
+    .innerContent{
+
+        @include center();
+
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+    .title{
+        width: 100%;
+        margin: 25px 0;
+
+        text-align: center;
+
+        font-size: 5em;
+        font-family: 'Western Bang Bang';
+    }
+
+    .videoPreview{
+        height: 75%;
+        width: auto;
+
+        img{
+            width: 100%;
+        }
+    }
+
+}
+
+.fullpageView{
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 100;
+
+    @include centerChild();
+
+    .background{
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: .75;
+    }
+
+    .vidContainer{
+        
+        width: 75%;
+        
+        height: auto;
+        max-height: 75%;
+
+        aspect-ratio: 16/9;
+
+        z-index: 101;
+
+    }
+}

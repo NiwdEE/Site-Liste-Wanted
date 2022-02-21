@@ -1,0 +1,222 @@
+@import 'mixins';
+
+@mixin lightFade(){
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+
+        z-index: 15;
+
+        background: linear-gradient(rgba(var(--c), calc(0.25 * var(--y))) 0%, rgba(var(--c), 0) 75%);
+    }
+}
+
+.card{
+    position: relative;
+    width: min(300px, 75vw);
+    height: auto;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+
+    font-family: 'Saddle Bag';
+
+
+    .content{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        transform-style: preserve-3d;
+        
+        transition: 1s;
+    }
+
+    .face{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        border-radius: 15px;
+        overflow: hidden;
+
+        -moz-backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+ 
+    }
+
+    &.wanted{
+
+        .ath{
+            opacity: 1;
+            transition: .3s;
+            transition-delay: .3s;
+        }
+
+        .fade{
+            opacity: 1;
+            transition: .3s ease-in;
+        }
+    }
+
+    &.desc .content{
+        transform: rotateY(0.5turn);
+    }
+
+}
+
+.front{
+    transform: rotateY(0);
+
+    @include lightFade();
+
+    .fade{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        opacity: 0;
+    }
+
+    .ath{
+
+        .old_image{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            z-index: 9;
+
+            & > img{
+                position: absolute;
+                top: 22.25%;
+                left: 50%;
+
+                transform: translate(-50%, calc(var(--os, 0%) * -1));
+
+                width: 90%;
+                height: auto;
+
+                // filter: saturate(.45);
+            }
+        }
+
+        .poster{
+            position: absolute;
+            top: 0;
+            left: 0;
+            max-height: 100%;
+            max-width: 100%;
+
+            z-index: 10;
+        }
+    }
+
+    .image{
+        position: relative;
+        width: 100%;
+        // height: 400px;
+        height: auto;
+        aspect-ratio: 3/4;
+
+        img{
+            @include center();
+            min-height: 100% !important;
+            min-width: 100% !important;
+
+
+            width: 100%;
+            height: auto;
+        }
+    }
+
+}
+
+.back{
+    background-color: beige;
+    
+    background: url(/assets/images/ath_back.png);
+    background-size: 100%;
+    
+    transform: rotateY(.5turn);
+
+    color: black;
+
+    @include lightFade();
+
+    .half{
+        width: auto;
+        height: 50%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .upper{
+        font-size: 30px;
+
+        .name{
+            font-size: 40px;
+        }
+    }
+
+    .lower{
+        font-size: 25px;
+        padding: 0 7px;
+
+        // text-rendering: geometricPrecision;
+    }
+}
+
+.ath{
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    transition: .3s;
+
+    .infos{
+        position: absolute;
+        width: 100%;
+        height: 112px;
+        left: 0;
+        bottom: 0px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        font-size: 1.75rem;
+
+        z-index: 11;
+
+        .name{
+            font-size: 2.42069rem;
+        }
+
+        color: black;
+
+        & > span{
+            width: 100%;
+
+            text-align: center;
+        }
+        
+    }
+}

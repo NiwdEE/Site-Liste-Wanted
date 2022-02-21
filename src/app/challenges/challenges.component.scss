@@ -1,0 +1,347 @@
+@import 'mixins';
+
+
+.hline{
+    position: relative;
+    width: 90%;
+    height: 2px;
+    background: transparent;
+    
+
+    border-width: 4px 0 3px 0;
+    border-color: wheat;
+    border-style: solid;
+
+    margin-bottom: 10px;
+}
+
+
+.innerComp{
+    overflow-y: auto;
+    overflow-x: hidden;
+    .innerContent{
+        height: calc(100% - 125px);
+        width: calc(100% - 50px);
+
+        margin: 100px 25px 25px 25px;
+
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: space-between;
+
+        flex-wrap: wrap;
+
+
+        .challenges{
+            height: 100%;
+            min-width: 355px;
+            flex-grow: 1;
+            max-width: 48%;
+            // max-width: 50vw;
+            color: wheat;
+            
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .title{
+                font-family: 'Western Bang Bang';
+                font-size: 5em;
+                flex-grow: 0;
+            }
+
+            .poster{
+                position: relative;
+                flex-grow: 1;
+                width: 100%;
+                height: 100%;
+
+                padding-right: 2px;
+
+                border-radius: 10px;
+                overflow: hidden;
+
+                font-size: 1.5em;
+                font-size: min(1.5em, 5vw);
+
+
+                .content{
+                    width: calc(100% - 2px);
+                    height: 100%;
+                    
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    position: absolute;
+                    color: black;
+                    
+                    table{
+                        margin: 0;
+                        width: calc(100% - 2px);
+
+                        border-collapse: collapse;
+
+                        thead{
+                            font-weight: bold;
+                            white-space: nowrap;
+
+                            border-bottom: 2px solid black;
+                        }
+
+                        td{
+                            padding: 5px;
+
+                            &.date{
+                                font-size: min(.9em, 5vw);
+                            }
+                        }
+
+                        tbody{
+                            tr:nth-of-type(odd){
+                                background-color: #fff6;
+                            }
+                        }
+
+                        .post{
+                            position: relative;
+                            background-color: black;
+                            color: white;
+
+                            border-radius: 5px;
+                            padding: 1.5em 0;
+
+                            @include noselect();
+
+                            &::after{
+                                content: "";
+
+                                position: absolute;
+                                height: 100%;
+                                width: 100%;
+                                top: 0;
+                                left: 0;
+
+                                overflow: visible;
+
+                                -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+                                background-color: #fff;
+                                opacity: .2;
+
+                                transform: translateX(-125%);
+
+                                transition: .69s ease-in-out;
+                            }
+
+                            &:hover{
+                                &::after{
+
+                                    transform: translateX(0);
+
+                                    transition: .69s ease-in-out;
+                                }
+                            }
+
+                            // @include centerChild();
+                        }
+
+                        
+                    }
+
+
+                    &::-webkit-scrollbar {
+                        width: 10px;
+                        // margin-right: 2px;
+                    }
+                          
+                    &::-webkit-scrollbar-thumb {
+                        background: var(--p-r-8);
+                        border-radius: 10px;
+                        margin-right: 3px;
+                    };
+                          
+                    &::-webkit-scrollbar-track {
+                        background: transparent;
+                    };
+                    
+                }
+            }
+        }
+
+        .made{
+
+            width: 50%;
+            
+            tbody tr:hover{
+                background-color: #5e381380 !important;
+            }
+
+            .poster::before{
+                position: absolute;
+                content: '';
+                height: 100%;
+                width: 100%;
+
+                background-image: url('/assets/images/ath_blank.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+
+        }
+
+
+        .tomake{
+
+            width: 46%;
+
+            // background-color: orange;
+
+            .poster::before{
+                position: absolute;
+                content: '';
+                height: 100%;
+                width: 100%;
+
+                background-image: url('/assets/images/ath_blank.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+
+
+.fullpageView{
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 100;
+
+    display: flex;
+
+    @include centerChild();
+
+    .background{
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: .75;
+    }
+
+    .container{
+        
+        
+
+
+
+        z-index: 101;
+
+        &.video{
+            background-color: black;
+            width: 75%;
+        
+            height: auto;
+            max-height: 75%;
+            aspect-ratio: 16/9;
+
+        }
+
+        &.form{
+            background-image: url('/assets/images/ath_blank.png');
+            background-size: 100% auto;
+
+            width: 75%;
+            max-width: 600px;
+            // aspect-ratio: 4/5;
+
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            color: black;
+            font-family: 'Western Bang Bang';
+
+            padding: 10px;
+
+            border-radius: 10px;
+
+            .title{
+                flex-grow: 0;
+                font-size: 5em;
+            }
+
+            form{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                flex-grow: 1;
+
+                width: 100%;
+
+                &>div.ic{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 1em;
+                }
+
+                label{
+                    font-size: 2em;
+                }
+
+                input{
+                    font-family: 'Arial';
+                }
+
+                input[name="defi"]{
+                    height: 1.5em;
+                    width: 80%;
+                    min-width: 100px;
+                }
+
+                input[name="par"]{
+                    height: 1.5em;
+                    width: 50%;
+                    min-width: 100px;
+                }
+
+                .submit{
+                    // width: 100%;
+                    // display: flex;
+
+                    // flex-direction: column;
+
+                    .send{
+                        width: auto;
+                        background-color: green;
+                        font-size: 2em;
+                        padding: .2em;
+                        text-align: center;
+                        @include noselect;
+
+                    }
+                }
+
+            }
+
+            
+        }
+
+    }
+}

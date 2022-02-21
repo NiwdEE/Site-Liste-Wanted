@@ -1,0 +1,36 @@
+<div class="innerComp">
+    <div id="home">
+        <div class="hideme" [class]="{'running': animRunning}">
+            <img id="animation" src="/assets/images/animation.gif" *ngIf="!loading.loading" alt="Logo animé">
+            
+            <div class="background"></div>
+        </div>
+    </div>
+
+    <!-- <span routerLink="/test" *ngFor="let i of A">home works {{i}}!</span> -->
+    <div id="membres">
+        <div class="title">
+            Membres
+        </div>
+        <div class="pole" *ngFor="let pole of people.Poles">
+            <div class="banner">
+                <span>{{pole.name}}</span>
+            </div>
+            <div class="people">
+                <ng-container *ngFor="let member of pole.members">
+                    <div memberCard CardPreview class="member" [id]="member.id">
+                        
+                    </div>
+                </ng-container>
+            </div>
+            
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+</div>
+
+<div class="preload">
+    <img src="/assets/images/animation.gif" alt="Préchargement logo animé">
+</div>
+

@@ -1,0 +1,201 @@
+@import 'mixins';
+$transition_time: 0.2s;
+
+.innerComp{
+    overflow: hidden;
+
+    .innerContent{
+        height: calc(100% - 100px);
+        // margin-top: 100px;
+        width: calc(100% - 40px);
+
+        margin: 80px 20px 20px 20px;
+
+        border-radius: 6.9px;
+
+        display: flex;
+
+        flex-direction: column;
+        justify-content: flex-start;
+
+        background-image: url('/assets/images/hpaper_lq.jpg');
+        background-size: 100% 100%;
+        background-position: 50% 50%;
+    }
+    
+    .title{
+        position: relative;
+        width: 100%;
+        padding: 25px 0 25px 0;
+
+        text-align: center;
+        color: black;
+
+        font-size: 6em;
+        font-family: 'Western Bang Bang';
+
+        flex-grow: 0;
+    }
+
+    
+
+
+    .sponsors{
+        position: relative;
+
+        // height: 50%;
+        width: 100%;
+
+        flex-grow: 1;
+        padding-bottom: 25px;
+
+        display: flex;
+        flex-direction: column;
+
+        // justify-content: space-around;
+        // align-items: center;
+
+        .row{
+            position: relative;
+
+            width: 100%;
+            
+            flex-grow: 1;
+            // height: 33%;
+            // max-height: 33%;
+
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
+            .sponsor{
+                position: relative;
+
+                flex-grow: 1;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                // padding: 10px 0;
+
+                // width: 100%;
+                height: calc(100% - 20px);
+
+                font-size: 2em;
+
+
+                .logo{
+                    // @include center();
+                    position: absolute;
+                    // max-width: 100%;
+                    // max-height: 100%;
+                    width: 80%;
+                    height: 80%;
+
+                    object-fit: contain;
+                }
+
+                .name{
+                    @include center();
+                    // width: 100%;
+                }
+
+            }
+
+        }
+    }
+
+}
+
+
+.fullpageView{
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 100;
+
+    @include centerChild();
+
+    .background{
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: .75;
+    }
+
+    .descContainer{
+        
+        width: 400px;
+        
+        color: black;
+
+        border-radius: 6.9px;
+
+
+        // aspect-ratio: 5/4;
+
+        z-index: 101;
+
+        // background-color: yellow;
+        background-image: url('/assets/images/ath_blank.png');
+
+        .infos{
+
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            .title{
+                flex-grow: 0;
+                width: 100%;
+                text-align: center;
+
+                margin-top: 10px;
+
+                font-size: 4em;
+                font-family: 'Western Bang Bang';
+        
+            }
+
+            .desc{
+                flex-grow: 1;
+                padding: 0 10px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                font-size: 1.5em;
+                font-family: 'Saddle Bag';
+
+                text-align: center;
+            }
+
+            .buttons{
+                flex-grow: 0;
+
+                font-size: 2.5em;
+                font-family: 'Western Bang Bang';
+
+                padding: 20px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+    }
+}
