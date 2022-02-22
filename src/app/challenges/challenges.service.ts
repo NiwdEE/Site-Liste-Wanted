@@ -14,8 +14,8 @@ export type challenge = {
 }
 
 export type chall = {
-  author: string,
-  task: string,
+  by: string,
+  desc: string,
   postdate: string,
 
   made: boolean,
@@ -37,8 +37,9 @@ export class ChallengesService {
   siteKey = "6Lf9OIgeAAAAAAJHRIIxSVC9g-XeU_sgoq3j4rHk"
 
   finished: challenge[] = [];
-  posted: proposition[] = []
-  // tests: challenge[] = []
+  posted: proposition[] = [];
+  
+  all: chall[] = [];  
 
   constructor(private http: HttpClient){
     this.getChalls()
@@ -68,6 +69,20 @@ export class ChallengesService {
     });
 
     return query;
+  }
+
+
+  getAllChalls(){
+    this.http.get('https://liste-wanted.fr/api-abeille-ruche-miel-o-crack/defis/getall')
+    .pipe(take(1))
+    .subscribe({
+      next: (res: any) => {
+        this.all = res.all;
+      },
+      error: (err) => {
+        console.log('Une erreur est survenue: ', err)
+      }
+    })
   }
 
 
