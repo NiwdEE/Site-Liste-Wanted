@@ -33,7 +33,7 @@ export class FooterComponent implements OnInit {
   copyAddress(){
     this.showPopup = true;
 
-    this.clipboard.copy('listewanted@gmail.com')
+    this.clipboard.copy('contact@liste-wanted.fr')
 
     setTimeout(() => {
       this.showPopup = false;

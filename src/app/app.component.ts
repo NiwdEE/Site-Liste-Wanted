@@ -38,7 +38,7 @@ export class AppComponent implements AfterViewInit, OnInit {
   }
 
   constructor(public nav: NavService, public scroll: ScrollService, private activatedRoute: ActivatedRoute, private router: Router){
-    console.error('%cAttention !\n⚠️  ⚠️  ⚠️\nGarder le devtool ouvert risque de nuire gravement aux performances du site !\n⚠️  ⚠️  ⚠️', 'color: #ff2121');
+    console.log('%cAttention !\n⚠️  ⚠️  ⚠️\nGarder le devtool ouvert risque de nuire gravement aux performances du site !\n⚠️  ⚠️  ⚠️', 'color: #ff2121');
 
   }
 
