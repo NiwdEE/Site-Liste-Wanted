@@ -13,6 +13,7 @@
                         <thead>
                             <tr>
                                 <!-- <th colspan="2">The table header</th> -->
+                                <td>N°</td>
                                 <td>Défi</td>
                                 <td>Proposé par</td>
                                 <td>Réalisé le</td>
@@ -20,6 +21,7 @@
                         </thead>
                         <tbody>
                             <tr *ngFor="let p of chals.finished; let i = index" (click)="showVideo(i)">
+                                <td>{{p.id}}</td>
                                 <td>{{p.desc}}</td>
                                 <td>{{p.by}}</td>
                                 <td class="date">{{p.madedate}}</td>
@@ -60,7 +62,7 @@
                             </th>
                             
                             <tr *ngFor="let p of chals.posted">
-                                <td>{{p.desc}}</td>
+                                <td class="desc">{{p.desc}}</td>
                                 <td>{{p.by}}</td>
                             </tr>
                             <!-- <th >
@@ -109,7 +111,7 @@
 
             <div class="ic">
                 <label for="defi">Mon défi</label>
-                <input type="text" name="defi" maxlength="100" ngModel>
+                <input type="text" name="defi" maxlength="200" ngModel>
             </div>
             
             <div class="ic">

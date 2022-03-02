@@ -5,6 +5,7 @@ import { TypedRes } from '../misc/common';
 // import { HttpClient } from '@angular/core/' 
 
 export type challenge = {
+  id: number,
   by: string,
   desc: string,
   postdate: string,
@@ -14,6 +15,7 @@ export type challenge = {
 }
 
 export type chall = {
+  id: number,
   by: string,
   desc: string,
   postdate: string,
@@ -24,6 +26,7 @@ export type chall = {
 }
 
 export type proposition = {
+  id: number,
   by: string,
   desc: string,
   postdate: string,

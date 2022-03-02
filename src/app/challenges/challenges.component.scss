@@ -74,12 +74,17 @@
                     
                     overflow-x: hidden;
                     overflow-y: auto;
-                    position: absolute;
+                    position: relative;
                     color: black;
                     
                     table{
-                        margin: 0;
-                        width: calc(100% - 2px);
+                        position: relative;
+
+                        // margin: 0;
+                        table-layout: auto;
+                        width: 100%;
+                        // width: fit-content;
+                        // max-width: 100%;
 
                         border-collapse: collapse;
 
@@ -96,6 +101,10 @@
                             &.date{
                                 font-size: min(.9em, 5vw);
                             }
+
+                            // &.desc{
+                                word-break: break-word;
+                            // }
                         }
 
                         tbody{

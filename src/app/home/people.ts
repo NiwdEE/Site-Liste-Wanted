@@ -234,11 +234,11 @@ export const Poles: pole[] = [
           nickname: "Mezaffaires ?",
           desc: "Si vous trouvez un truc qui traine, c'est sûrement à elle"
         },
-        {
-          name: "Mohammed R.",
-          nickname: "Jack",
-          desc: "Le meilleur déguisement du far west"
-        }
+        // {
+        //   name: "Mohammed R.",
+        //   nickname: "Jack",
+        //   desc: "Le meilleur déguisement du far west"
+        // }
       ]
     },
     {
