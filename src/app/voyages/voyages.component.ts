@@ -23,13 +23,13 @@ export class VoyagesComponent implements OnInit {
     {
       name: 'Ski',
       img: 'ski',
-      desc: "Viens tester ta descente dans les Alpes, entre la France et la Suisse.",
+      desc: "Viens tester ta descente dans l'Alpe d'Huez, entre la France et l'Italie. Une expérience inoubliable, peu importe ton niveau !",
       color: "#84dee8"
     },
     {
-      name: "Étranger",
+      name: "Budapest",
       img: 'etr',
-      desc: "Optez pour un voyage en Europe de l'est avec des paysages (et prix d'alcool) à couper le souffle !",
+      desc: "Optez pour un voyage en Europe de l'est avec des paysages, une ambiance (et les prix de l'alcool) à couper le souffle !",
       color: "#ebaa1e"
     }
   ]

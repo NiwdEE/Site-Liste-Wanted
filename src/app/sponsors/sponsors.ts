@@ -24,7 +24,7 @@ export const sponsors: sponsor[] = [
     },
     {
         name: "Pumpkin",
-        desc: "Vous propose des réductions grâce au code parrainage Wanted, et nous permettera d'avoir accès à une billeterie simple et éfficace",
+        desc: "Vous propose des réductions et 15 euros offerts grâce au code parrainage Wanted.",
         logo: 'PK.png',
         link: "https://pumpkin-app.co"
     },
@@ -38,6 +38,13 @@ export const sponsors: sponsor[] = [
         name: "Pop out",
         desc: "Une super application de bons plans sur Paris et ses alentours.",
         logo: 'PO.png'
+    },
+    {
+        name: "Buffalo Grill",
+        desc: `Le Buffalo Grill de Cergy vous propose 10% de réduction si vous venez de notre part<br/>
+            Vous aurez également accès à des offres temporaires exclusives<br/>
+            (sous présentation de votre carte étudiante)`,
+        logo: 'buffalo.png'
     },
     {
         name: "Poppy’s",
@@ -68,4 +75,5 @@ export const sponsors: sponsor[] = [
         desc: 'Une super application de bons plans sur Cergy et ses alentours.',
         logo: 'BEE.png'
     },
+    
 ]

@@ -101,7 +101,6 @@ export class ChallengesComponent implements OnInit {
   }
 
   onSubmit(values: any){
-
     if(values.par.length > 30 || values.par.length == 0  || values.defi.length > 200 || values.defi.length < 10 || !this.token) return;
 
     this.chals.subChall(values.defi, values.par, this.token)
