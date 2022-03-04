@@ -10,7 +10,8 @@ export type challenge = {
   desc: string,
   postdate: string,
 
-  link: string,
+  fblink: string,
+  ytlink?: string,
   madedate: string
 }
 
@@ -21,7 +22,8 @@ export type chall = {
   postdate: string,
 
   made: boolean,
-  link?: string,
+  fblink?: string,
+  ytlink?: string,
   madedate?: string
 }
 

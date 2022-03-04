@@ -84,7 +84,7 @@ export class ChallengesComponent implements OnInit {
     if(which !== null){
       // this.videoCode = this.chals.tests[which].link
       // this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/'+ which +'?enablejsapi=1&version=3&playerapiid=ytplayer');
-      this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.facebook.com/plugins/video.php?href='+ this.chals.finished[which].link + '&show_text=false&t=0');
+      this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.facebook.com/plugins/video.php?href='+ this.chals.finished[which].fblink + '&show_text=false&t=0');
 
     }
 
